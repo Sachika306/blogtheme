@@ -2,6 +2,13 @@
 <html lang="ja">
   <head>
     <title><?php echo get_bloginfo('name'); ?></title>
+	<!-- Google Tag Manager -->
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-5ZPKMDR');</script>
+	<!-- End Google Tag Manager -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="shortcut icon" href="/path/to/favicon.ico">
@@ -9,6 +16,10 @@
   </head>
   
   <body>
+	<!-- Google Tag Manager (noscript) -->
+		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5ZPKMDR"
+		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
 
   <header class="header">
       <div class="header-title" itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
@@ -16,7 +27,7 @@
 
         <?php is_home() ? print '<h1 style="margin: 0px;">' : print '<h2 style="margin: 0px;">' ?>
           <a href="<?php echo get_site_url(); ?>" itemprop="url">
-            <img src="http://localhost:10028/add-a-heading/" alt="Logo">
+            <img src="http://selftaught056.com/wp-content/uploads/2021/05/logo.png" alt="Logo">
             <!-- https://developers.google.com/search/docs/data-types/article#logo-guidelines -->
           </a>
           <?php is_home() ? print '</h1>' : print '</h2>' ?>
