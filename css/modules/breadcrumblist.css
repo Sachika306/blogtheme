@@ -1,0 +1,29 @@
+@charset "UTF-8";
+/* responsive */
+/* 装飾class */
+.dashedLine {
+  border: dashed 2px lightgray;
+  width: 100%;
+}
+
+/* fontawesomeにないはてぶアイコン追加 */
+.fa-hatena:before {
+  content: "B!";
+  font-family: Verdana;
+  font-weight: bold;
+}
+
+/* shareボタン用色 */
+.breadcrumblist ol {
+  list-style: none;
+  padding-left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.breadcrumblist ol li {
+  font-size: 14px;
+}
+/*# sourceMappingURL=breadcrumblist.css.map */

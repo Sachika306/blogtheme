@@ -1,0 +1,27 @@
+@import '../base/utility-classes.scss';
+@import '../base/variables2.scss';
+
+.related {
+    background-color: white;
+    padding: 30px 70px 60px 70px;
+
+    h3 {
+        margin: 50px 0px 18px;
+    }
+
+    &-box {
+        display: flex;
+        width: 100%;
+        margin-bottom: 30px;
+
+        h4 {
+            margin: 0px 20px;
+        }
+
+    }
+
+    &-thumbnail {
+        @include relatedImg();
+    }
+
+}

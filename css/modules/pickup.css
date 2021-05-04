@@ -1,0 +1,34 @@
+@charset "UTF-8";
+/* responsive */
+/* 装飾class */
+.dashedLine {
+  border: dashed 2px lightgray;
+  width: 100%;
+}
+
+/* fontawesomeにないはてぶアイコン追加 */
+.fa-hatena:before {
+  content: "B!";
+  font-family: Verdana;
+  font-weight: bold;
+}
+
+.pickup ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.pickup-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.pickup-list__item a {
+  color: black;
+  background-color: gray;
+  text-decoration: none;
+}
+/*# sourceMappingURL=pickup.css.map */

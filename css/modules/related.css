@@ -1,0 +1,44 @@
+@charset "UTF-8";
+/* responsive */
+/* 装飾class */
+.dashedLine {
+  border: dashed 2px lightgray;
+  width: 100%;
+}
+
+/* fontawesomeにないはてぶアイコン追加 */
+.fa-hatena:before {
+  content: "B!";
+  font-family: Verdana;
+  font-weight: bold;
+}
+
+/* shareボタン用色 */
+.related {
+  background-color: white;
+  padding: 30px 70px 60px 70px;
+}
+
+.related h3 {
+  margin: 50px 0px 18px;
+}
+
+.related-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.related-box h4 {
+  margin: 0px 20px;
+}
+
+.related-thumbnail {
+  height: auto;
+  width: 150px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+/*# sourceMappingURL=related.css.map */

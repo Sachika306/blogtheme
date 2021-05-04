@@ -1,0 +1,27 @@
+@import '../base/utility-classes.scss';
+@import '../base/variables2.scss';
+
+.topArticles {
+    z-index: -2;
+
+    &-element {
+        position: relative;
+        font-weight: bold;
+        margin: 20px 10px 40px 10px;
+
+        &__num {
+            font-size: 95px;
+            color: $veryLightGray;
+            position: absolute;
+            line-height: 0;
+            top: 15px;
+        }
+
+        &__title {
+            position: static;
+            margin-left: 30px;
+            @include link(gray);
+            opacity: 0.99;
+        }
+    }
+}

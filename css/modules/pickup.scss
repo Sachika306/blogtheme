@@ -1,0 +1,16 @@
+@import '../base/utility-classes.scss';
+
+.pickup ul {
+  @include removeUlButtons();
+}
+
+.pickup-list {
+  display: flex;
+  justify-content: space-around;
+
+  &__item a {
+    color: black;
+    background-color: gray;
+    text-decoration: none;
+  }
+}

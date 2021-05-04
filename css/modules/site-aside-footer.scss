@@ -1,0 +1,55 @@
+@import '../base/utility-classes.scss';
+@import '../base/variables2.scss';
+
+footer {
+    background-color: white;
+
+    .footerMenu {
+        margin-bottom: 30px;
+        padding: 80px 60px 50px 60px;
+        color: $lightGray;
+    
+        &-title {
+            text-align: center;
+            letter-spacing: 1.7px;
+            font-size: 20px;
+            text-align: left;
+        }
+    
+        p {
+            font-size: 16px;
+        }
+    }
+
+    .copyright {
+        background-color: $darkGray;
+    }
+
+}
+
+.sidebar {
+    border-radius: 5px;
+    background-color: white;
+    margin-bottom: 30px;
+    padding: 20px 30px 50px 30px;
+    
+    &-title {
+        text-align: center;
+        letter-spacing: 1.7px;
+        margin-bottom: 50px;
+    }
+
+    .profile {
+        text-align: center;
+
+        &-image {
+            border-radius: 50%;
+            width: 110px;
+        }
+    }
+
+    p {
+        font-size: 15px;
+    }
+    
+}

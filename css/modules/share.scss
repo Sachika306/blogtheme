@@ -1,0 +1,40 @@
+@import '../base/utility-classes.scss';
+@import '../base/variables2.scss';
+
+.share {
+    
+
+    ul {
+        @include removeUlButtons();
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: -18px;
+
+        li {
+            text-align: right;
+            width: 80px;
+
+            i {
+                color: white;
+                margin-left: 10px;
+                padding: 7px 0px;
+                text-align: center;
+                border-radius: 2px;
+                display: block;
+            }
+
+            .fa-facebook-f {
+                background-color: $facebook;
+            }
+
+            .fa-twitter {
+                background-color: $twitter;
+            }
+
+            .fa-hatena {
+                background-color: $hatena;
+            }
+        }
+
+    }
+}

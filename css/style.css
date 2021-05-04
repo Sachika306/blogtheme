@@ -1,0 +1,22 @@
+/* third party packages */
+@import "../node_modules/normalize.css/normalize.css";
+@import "../node_modules/bootstrap/dist/css/bootstrap.css";
+@import "../node_modules/@fortawesome/fontawesome-free/css/all.css";
+
+/* importing base files */
+@import 'base/utility-classes.css';
+@import 'base/baseline.css';
+
+/* importing modules */
+@import 'modules/pickup.css';
+@import 'modules/site-header.css';
+@import 'modules/site-article.css';
+@import 'modules/site-aside-footer.css';
+@import 'modules/topArticles.css';
+@import 'modules/pagination.css';
+
+/* singlepage modules */
+@import 'modules/single.css';
+@import 'modules/breadcrumblist.css';
+@import 'modules/share.css';
+@import 'modules/related.css';

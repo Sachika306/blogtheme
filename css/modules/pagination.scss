@@ -1,0 +1,19 @@
+@import '../base/utility-classes.scss';
+@import '../base/variables2.scss';
+
+.pagination {
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+
+        &-next, &-prev {
+                @include link($lightGray);
+                font-size: 20px;
+                a {
+                        padding: 5px 20px;
+                        font-weight: 400;
+                        letter-spacing: 2px;
+                }
+        }
+}

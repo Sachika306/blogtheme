@@ -1,0 +1,15 @@
+@import '../base/utility-classes.scss';
+@import '../base/variables2.scss';
+
+.breadcrumblist {
+    
+    ol {
+        @include removeUlButtons();
+        display: flex;
+        margin-bottom: 20px;
+
+        li {
+            font-size: 14px;
+        }
+    }
+}

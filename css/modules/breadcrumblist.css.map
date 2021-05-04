@@ -1,0 +1,11 @@
+{
+    "version": 3,
+    "mappings": ";ACAA,gBAAgB;AAqDhB,eAAe;AACf,AAAA,WAAW,CAAC;EACR,MAAM,EAAE,oBAAoB;EAAE,KAAK,EAAE,IAAI;CAC5C;;AAED,yCAAyC;AACzC,AAEI,UAFM,AAEL,OAAO,CAAC;EACL,OAAO,EAAE,IAAI;EACb,WAAW,EAAE,OAAO;EACpB,WAAW,EAAE,IAAI;CACpB;;AC1DL,qBAAqB;AFJrB,AAEI,eAFW,CAEX,EAAE,CAAC;ECmBH,UAAU,EAAE,IAAI;EAChB,YAAY,EAAE,CAAC;EDlBX,OAAO,EAAE,IAAI;EACb,aAAa,EAAE,IAAI;CAKtB;;AAVL,AAOQ,eAPO,CAEX,EAAE,CAKE,EAAE,CAAC;EACC,SAAS,EAAE,IAAI;CAClB",
+    "sources": [
+        "breadcrumblist.scss",
+        "../base/utility-classes.scss",
+        "../base/variables2.scss"
+    ],
+    "names": [],
+    "file": "breadcrumblist.css"
+}

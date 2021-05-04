@@ -1,0 +1,67 @@
+@charset "UTF-8";
+/* responsive */
+/* 装飾class */
+.dashedLine {
+  border: dashed 2px lightgray;
+  width: 100%;
+}
+
+/* fontawesomeにないはてぶアイコン追加 */
+.fa-hatena:before {
+  content: "B!";
+  font-family: Verdana;
+  font-weight: bold;
+}
+
+/* shareボタン用色 */
+footer {
+  background-color: white;
+}
+
+footer .footerMenu {
+  margin-bottom: 30px;
+  padding: 80px 60px 50px 60px;
+  color: #7b7b7b;
+}
+
+footer .footerMenu-title {
+  text-align: center;
+  letter-spacing: 1.7px;
+  font-size: 20px;
+  text-align: left;
+}
+
+footer .footerMenu p {
+  font-size: 16px;
+}
+
+footer .copyright {
+  background-color: #2e2e2e;
+}
+
+.sidebar {
+  border-radius: 5px;
+  background-color: white;
+  margin-bottom: 30px;
+  padding: 20px 30px 50px 30px;
+}
+
+.sidebar-title {
+  text-align: center;
+  letter-spacing: 1.7px;
+  margin-bottom: 50px;
+}
+
+.sidebar .profile {
+  text-align: center;
+}
+
+.sidebar .profile-image {
+  border-radius: 50%;
+  width: 110px;
+}
+
+.sidebar p {
+  font-size: 15px;
+}
+/*# sourceMappingURL=site-aside-footer.css.map */

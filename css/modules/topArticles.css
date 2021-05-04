@@ -1,0 +1,49 @@
+@charset "UTF-8";
+/* responsive */
+/* 装飾class */
+.dashedLine {
+  border: dashed 2px lightgray;
+  width: 100%;
+}
+
+/* fontawesomeにないはてぶアイコン追加 */
+.fa-hatena:before {
+  content: "B!";
+  font-family: Verdana;
+  font-weight: bold;
+}
+
+/* shareボタン用色 */
+.topArticles {
+  z-index: -2;
+}
+
+.topArticles-element {
+  position: relative;
+  font-weight: bold;
+  margin: 20px 10px 40px 10px;
+}
+
+.topArticles-element__num {
+  font-size: 95px;
+  color: #ebebeb;
+  position: absolute;
+  line-height: 0;
+  top: 15px;
+}
+
+.topArticles-element__title {
+  position: static;
+  margin-left: 30px;
+  opacity: 0.99;
+}
+
+.topArticles-element__title a {
+  color: gray;
+  font-weight: 600;
+}
+
+.topArticles-element__title a:hover {
+  opacity: 0.8;
+}
+/*# sourceMappingURL=topArticles.css.map */
