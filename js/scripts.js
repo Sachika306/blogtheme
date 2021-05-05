@@ -26,7 +26,7 @@ $(document).ready(function(){
           }
     });
 
-    $( ".menu-item" ).mouseover(function() {  // mouse enter
+    $('.parentMenu').find(".menu-item" ).mouseover(function() {  // mouse enter
         $( this ).find( " > .childMenu" ).toggleClass('menu-itemActive');
     });
 

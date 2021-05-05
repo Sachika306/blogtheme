@@ -16,7 +16,7 @@
         width: 100%;
 
         &__md {
-            @include sm {
+            @include lg {
                 display: none;
             }
         }
@@ -24,7 +24,7 @@
         &__sp {
             display: none;
             
-            @include sm {
+            @include lg {
                 display: block;
             }
         }
@@ -33,6 +33,7 @@
 
     i {
         margin: 15px;
+        color: white;
     }
 }
 
@@ -54,6 +55,9 @@
 
      ul {
         @include removeUlButtons();
+        .childMenu a {
+            color: gray;
+        }
         li {
             padding: 10px;
             a {
@@ -103,23 +107,22 @@
             margin: 20px auto;
             letter-spacing: 0px;
             @include link(white);
-            @include sm {
+            @include lg {
                 display: none;
             }
             a {
-                padding: 21px;
+                padding: 22px;
             }
         }
     }
 
     .childMenu {
-        display: block;
         float: left;
         background-color: $darkGray;
         opacity: 0.8;
         position: absolute;
         z-index: 1;
-        top: 100%;
+        top: 98%;
         padding-left: 0;
         display: none;
 

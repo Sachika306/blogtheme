@@ -38,7 +38,7 @@
       <!-- ヘッダーナビゲーション -->
       <div class="header-nav">
         <?php get_template_part('/template-parts/categoryMenu');?>
-        
+
         <!-- 検索ボタン -->
         <div class="header-nav__md">
           <i class="fa fa-search fa-2x"></i>
@@ -56,7 +56,7 @@
 
     <!-- スマホ用ナビゲーション -->
     <div class="spnavMenu">
-        <?php get_template_part('/template-parts/categoryMenu');?>
+      <?php get_template_part('/template-parts/categoryMenu');?>
         <div class="spnavMenu-search">
             <?php get_search_form(); ?>
         </div>
