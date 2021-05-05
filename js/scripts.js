@@ -25,4 +25,12 @@ $(document).ready(function(){
             $('body').removeClass('active');
           }
     });
+
+    $( ".menu-item" ).mouseover(function() {  // mouse enter
+        $( this ).find( " > .childMenu" ).toggleClass('menu-itemActive');
+    });
+
+    $( ".menu-item" ).mouseout(function() {  // mouse enter
+        $( this ).find( " > .childMenu" ).toggleClass('menu-itemActive');
+    });
 });

@@ -15,34 +15,6 @@
         justify-content: space-between;
         width: 100%;
 
-        ul {
-        list-style: none;
-        display: flex;
-        margin-bottom: 0;
-        }
-
-        li {
-            padding: 24px 0px;
-            letter-spacing: 0px;
-            @include link(white);
-
-            @include sm {
-                display: none;
-            }
-
-            a {
-               font-weight: 400;
-               font-size: 18px;
-               padding: 24px 16px;
-            }
-        }
-
-        i {
-            color: white;
-            cursor: pointer;
-            margin: 24px;
-        }
-
         &__md {
             @include sm {
                 display: none;
@@ -57,6 +29,10 @@
             }
         }
 
+    }
+
+    i {
+        margin: 15px;
     }
 }
 
@@ -76,7 +52,7 @@
         position: absolute;
     }
 
-    ul {
+     ul {
         @include removeUlButtons();
         li {
             padding: 10px;
@@ -112,4 +88,58 @@
 
 .openSearch {
     display: block;
+}
+
+.header-nav {
+    position: relative;
+    
+    .parentMenu {
+        position: relative;
+        list-style: none;
+        display: flex;
+        margin-bottom: 0px;
+        
+        .menu-item {
+            margin: 20px auto;
+            letter-spacing: 0px;
+            @include link(white);
+            @include sm {
+                display: none;
+            }
+            a {
+                padding: 21px;
+            }
+        }
+    }
+
+    .childMenu {
+        display: block;
+        float: left;
+        background-color: $darkGray;
+        opacity: 0.8;
+        position: absolute;
+        z-index: 1;
+        top: 100%;
+        padding-left: 0;
+        display: none;
+
+        .menu-item {
+            margin: 20px auto;
+            @include removeUlButtons();
+            min-width: 200px;
+            padding-left: 0px;
+            
+
+            a {
+                min-width: 200px;
+                padding: 20px;
+                color: white;
+            }
+        }
+
+    }
+
+    .menu-itemActive {
+        display: block;
+    }
 }

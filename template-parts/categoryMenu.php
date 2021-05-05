@@ -1,7 +1,9 @@
-<ul>
-    <?php $categories = get_categories();
-        foreach ($categories as $category) {
-            echo '<li>'.'<a href="'.get_category_link($category->term_id).'">'.$category->name.'</a>'.'</li>';
-        }
+
+    <?php wp_nav_menu( array(
+        'theme_location'=>'global', 
+        'container'     =>'<nav>', 
+        'menu_class'    =>'header-nav',
+        'depth' => 0,
+        'items_wrap'    =>'<ul class="parentMenu">%3$s</ul>',
+        'walker'  => new custom_walker_nav_menu));
     ?>
-</ul>

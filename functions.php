@@ -23,6 +23,20 @@ function setPostViews($postID) {
     }
 }
 
+class custom_walker_nav_menu extends Walker_Nav_Menu {
+    function start_lvl(&$output, $depth = 0, $args = array()) {
+        $output .= '<ul class="childMenu">';
+    }
+    function end_lvl(&$output, $depth = 0, $args = array()) {
+        $output .= '</ul>';
+    }
+}
+
+register_nav_menus( array(
+    'global' => 'Global Menu',
+    'footer-menu'  => 'Footer Menu',
+  ) );
+
 add_theme_support('post-thumbnails'); // Thumbnailを使えるようにする
 add_action('wp_enqueue_scripts', 'add_css_js');
 remove_filter('pre_user_description', 'wp_filter_kses');//プロフィールの自己紹介欄でHTMLを適用できるようにする
