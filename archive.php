@@ -5,12 +5,13 @@
     <main role="main" itemscope itemtype="http://schema.org/Blog" itemprop="mainContentOfPage" class="container">
     
         <section class="article col-md-8">
+        <h1><?php the_category('/'); ?>に関する記事</h1>
 
         <?php 
           if ( have_posts() ) : 
           while ( have_posts() ) : the_post(); ?>
 
-          <h1><?php the_category('/'); ?>に関する記事</h1>
+          
           <article itemscope itemtype ="https://schema.org/BlogPosting" class="article-item">
             <h2 itemprop="headline" class="article-title" >
               <a href="<?php the_permalink(); ?>" itemprop="mainEntityOfPage"><?php the_title(); ?></a>
