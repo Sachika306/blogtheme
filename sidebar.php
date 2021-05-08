@@ -26,10 +26,10 @@
 
     <div class="sidebar">
         <div class="profile" itemprop="author" itemscope itemtype="https://schema.org/Person">
-        <h3 class="sidebar-title" itemprop="name"><?php print_r(get_user_meta(2)->nickname) ?></h3>
-        <img src="<?php echo get_avatar_url(2) ?>" alt="プロフィール画像" class="profile-image">
+        <h3 class="sidebar-title" itemprop="name"><?php the_author_meta('nickname'); ?></h3>
+            <img class="profile-image" src="<?php echo get_avatar_url(wp_get_current_user()); ?>" alt="プロフィール画像" >
         <div class="profile-text">
-        <p><?php the_author_description(); ?></p>
+        <p><?php the_author_meta('description'); ?></p>
         </div>
     </div>
     </div>

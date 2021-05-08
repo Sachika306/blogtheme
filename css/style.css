@@ -11,7 +11,9 @@
 @import 'modules/pickup.css';
 @import 'modules/site-header.css';
 @import 'modules/site-article.css';
-@import 'modules/site-aside-footer.css';
+@import 'modules/site-aside.css';
+@import 'modules/site-footer.css';
+
 @import 'modules/topArticles.css';
 @import 'modules/pagination.css';
 

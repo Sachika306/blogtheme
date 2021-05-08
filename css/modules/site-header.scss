@@ -10,9 +10,15 @@
         margin-left: 10px;
     }
 
+    &-logo {
+        h1 {
+            line-height: 0px;
+        }
+    }
+
     &-nav {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-between; 
         width: 100%;
 
         &__md {

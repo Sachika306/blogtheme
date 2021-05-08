@@ -28,6 +28,10 @@
   margin-left: 10px;
 }
 
+.header-logo h1 {
+  line-height: 0px;
+}
+
 .header-nav {
   display: -webkit-box;
   display: -ms-flexbox;

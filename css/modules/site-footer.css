@@ -31,6 +31,14 @@ footer .footerMenu-title {
   text-align: left;
 }
 
+footer .footerMenu-content li, footer .footerMenu-content p {
+  margin: 7px auto;
+}
+
+footer .footerMenu-content ul {
+  list-style: none;
+}
+
 footer .footerMenu p {
   font-size: 16px;
 }
@@ -38,30 +46,4 @@ footer .footerMenu p {
 footer .copyright {
   background-color: #2e2e2e;
 }
-
-.sidebar {
-  border-radius: 5px;
-  background-color: white;
-  margin-bottom: 30px;
-  padding: 20px 30px 50px 30px;
-}
-
-.sidebar-title {
-  text-align: center;
-  letter-spacing: 1.7px;
-  margin-bottom: 50px;
-}
-
-.sidebar .profile {
-  text-align: center;
-}
-
-.sidebar .profile-image {
-  border-radius: 50%;
-  width: 110px;
-}
-
-.sidebar p {
-  font-size: 15px;
-}
-/*# sourceMappingURL=site-aside-footer.css.map */
+/*# sourceMappingURL=site-footer.css.map */

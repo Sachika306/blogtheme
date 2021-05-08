@@ -1,5 +1,4 @@
-
-    <?php wp_nav_menu( array(
+   <?php wp_nav_menu( array(
         'theme_location'=>'global', 
         'container'     =>'<nav>', 
         'menu_class'    =>'header-nav',
