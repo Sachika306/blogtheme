@@ -38,9 +38,9 @@
 
             <div class="share">
               <ul class="">
-                <li class="facebook"><i class="fab fa-facebook-f"></i></li>
-                <li class="twitter"><i class="fab fa-twitter"></i></li>
-                <li class="hatena"><i class="fab fa-hatena"></i></li>
+                <li class="facebook"><a class="sns__facebook" href="http://www.facebook.com/share.php?u=<? echo get_the_permalink(); ?>" target="_blank" rel="nofollow noopener"><i class="fab fa-facebook-f"></i></a></li>
+                <li class="twitter"><a class="sns__twitter" href="https://twitter.com/share?url=<? echo get_the_permalink(); ?>&text=<? echo get_the_title(); ?>" target="_blank" rel="nofollow noopener"><i class="fab fa-twitter"></i></a></li>
+                <li class="hatena"><a class="sns__line" href="https://social-plugins.line.me/lineit/share?url=<? echo get_the_permalink(); ?>" target="_blank" rel="nofollow noopener"><i class="fab fa-hatena"></i></a></li>
               </ul>
             </div>
           </article>

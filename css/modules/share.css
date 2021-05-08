@@ -29,11 +29,11 @@
 .share ul li {
   text-align: right;
   width: 80px;
+  margin-left: 10px;
 }
 
 .share ul li i {
   color: white;
-  margin-left: 10px;
   padding: 7px 0px;
   text-align: center;
   border-radius: 2px;

@@ -4,6 +4,7 @@
 .related {
     background-color: white;
     padding: 30px 70px 60px 70px;
+    @include spWidth(); 
 
     h3 {
         margin: 50px 0px 18px;

@@ -25,6 +25,16 @@ footer {
                 list-style: none;
             }
         }
+
+        .profile {
+            text-align: center;
+    
+            &-image {
+                border-radius: 50%;
+                width: 110px;
+
+            }
+        }
     
         p {
             font-size: 16px;

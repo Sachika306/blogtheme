@@ -39,6 +39,15 @@ footer .footerMenu-content ul {
   list-style: none;
 }
 
+footer .footerMenu .profile {
+  text-align: center;
+}
+
+footer .footerMenu .profile-image {
+  border-radius: 50%;
+  width: 110px;
+}
+
 footer .footerMenu p {
   font-size: 16px;
 }

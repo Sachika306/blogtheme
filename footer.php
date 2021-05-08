@@ -19,9 +19,11 @@
           <div class="footerMenu col-md-4">
             <div class="footerMenu-content">
               <h3 class="footerMenu-title"><?php echo wp_get_nav_menu_name('footerRight'); ?></h3>
-              <div>
-                <p><?php the_author_meta('description'); ?></p>
-                <?php get_template_part('/template-parts/footerRight');?>
+                <p><?php echo get_bloginfo('description'); ?></p>
+              <div itemprop="author" itemscope itemtype="https://schema.org/Person">
+                <h3 class="footerMenu-title"  itemprop="name">筆者プロフィール</h3>
+                <img class="profile-image" src="<?php echo get_avatar_url(wp_get_current_user()); ?>" alt="プロフィール画像" >
+                <p class="profile-text"><?php the_author_meta('description'); ?></p>
               </div>
             </div>  
           </div>
