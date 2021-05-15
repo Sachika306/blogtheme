@@ -26,10 +26,10 @@ function set_post_views($postID) {
       update_post_meta($postID, $count_key, $count);
     }
   }
-	
-function is_bot() { //クローラーのアクセス判別
+
+//クローラーのアクセス判別・アクセス数から除外
+function is_bot() { 
     $ua = $_SERVER['HTTP_USER_AGENT'];
-   
     $bot = array(
           "googlebot",
           "msnbot",
@@ -62,6 +62,17 @@ class custom_walker_nav_menu extends Walker_Nav_Menu { // CustomWalker設定
         $output .= '</ul>';
     }
 }
+
+
+/*
+ * WEBP対応
+ */
+function custom_mime_types( $mimes ) {
+  $mimes['webp'] = 'image/webp';
+  return $mimes;
+}
+add_filter( 'upload_mimes', 'custom_mime_types' );
+
 
 remove_filter('pre_user_description', 'wp_filter_kses'); //プロフィールの自己紹介欄でHTMLを適用できるようにする
 add_theme_support('post-thumbnails'); // Thumbnailを使えるようにする
