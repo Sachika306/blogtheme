@@ -88,5 +88,20 @@
         echo '<meta itemprop="position" content="'.$i.'">';
         echo '</li>';
     }
+
+    if (is_search()) {
+        $currentCat = get_the_category()[0];
+        $parentCatInt = $currentCat->category_parent;
+        $parent = get_category($parentCatInt);
+
+        // 個別記事のタイトル
+        echo '<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">';
+        echo '<span itemprop="item">';
+        echo '<span itemprop="name">「'.get_search_query().'」の検索結果</span>';
+        echo '</span>';
+        $i ++;
+        echo '<meta itemprop="position" content="'.$i.'">';
+        echo '</li>';
+    }
     ?>
 </ol>

@@ -65,3 +65,4 @@ class custom_walker_nav_menu extends Walker_Nav_Menu { // CustomWalker設定
 
 remove_filter('pre_user_description', 'wp_filter_kses'); //プロフィールの自己紹介欄でHTMLを適用できるようにする
 add_theme_support('post-thumbnails'); // Thumbnailを使えるようにする
+
