@@ -1,6 +1,6 @@
    <?php wp_nav_menu( array(
         'theme_location'=>'global', 
-        'container'     =>'<nav>', 
+        'container'     =>'<nav class="">', 
         'menu_class'    =>'header-nav',
         'depth' => 0,
         'items_wrap'    =>'<ul class="parentMenu">%3$s</ul>',

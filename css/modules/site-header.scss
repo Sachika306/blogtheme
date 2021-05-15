@@ -4,24 +4,18 @@
 .header {
     display: flex;
     background-color: $Gray;
-
-    &-title {
-        align-self: center;
-        margin-left: 10px;
-    }
-
-    &-logo {
-        h1 {
-            line-height: 0px;
-        }
-    }
+    position: relative;
 
     &-nav {
+        width: 90%;
+        margin: 0 auto;
         display: flex;
         justify-content: space-between; 
-        width: 100%;
-
+        color: white;
+        
         &__md {
+            align-self: center;
+            padding: 18px;
             @include lg {
                 display: none;
             }
@@ -29,19 +23,88 @@
 
         &__sp {
             display: none;
-            
+            margin: 18px;
+            align-self: center;
             @include lg {
                 display: block;
+            }
+        }
+    }
+
+    // ブログタイトルの中央よせ
+    &-titlewrapper { 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    // ブログタイトルのフォントデザイン
+    &-title {
+        margin: 0; //リセットCSSに入っている margin-top, margin-bottom の指定を0に
+        font-family: cursive; 
+        @include md {
+            font-size: 18px;
+        }
+        font-size: 28px; // デスクトップでのタイトルフォントサイズ
+        color: white;
+        text-decoration: none;
+    }
+
+    .parentMenu {
+        width: 80%;
+        position: relative;
+        list-style: none;
+        display: flex;
+        margin-bottom: 0px;
+        align-self: center;
+        
+        @include sm {
+            width: 0%;
+        }
+        
+        .menu-item {
+            letter-spacing: 0px;
+            padding: 18px;
+            @include link(white);
+            @include lg {
+                display: none;
+            }
+        }
+    }
+
+    .childMenu {
+        float: left;
+        background-color: $darkGray;
+        opacity: 0.8;
+        position: absolute;
+        z-index: 1;
+        top: 100%;
+        padding-left: 0;
+        display: none;
+        
+
+        .menu-item {
+            @include removeUlButtons();
+            min-width: 200px;
+            padding-left: 0px;
+
+            a {
+                min-width: 200px;
+                padding: 18px;
+                color: white;
             }
         }
 
     }
 
-    i {
-        margin: 15px;
-        color: white;
+    .menu-itemActive {
+        display: block;
     }
 }
+
+
+
+
 
 .spnavMenu {
     z-index: 1;
@@ -98,57 +161,4 @@
 
 .openSearch {
     display: block;
-}
-
-.header-nav {
-    position: relative;
-    
-    .parentMenu {
-        position: relative;
-        list-style: none;
-        display: flex;
-        margin-bottom: 0px;
-        
-        .menu-item {
-            margin: 20px auto;
-            letter-spacing: 0px;
-            @include link(white);
-            @include lg {
-                display: none;
-            }
-            a {
-                padding: 22px;
-            }
-        }
-    }
-
-    .childMenu {
-        float: left;
-        background-color: $darkGray;
-        opacity: 0.8;
-        position: absolute;
-        z-index: 1;
-        top: 98%;
-        padding-left: 0;
-        display: none;
-
-        .menu-item {
-            margin: 20px auto;
-            @include removeUlButtons();
-            min-width: 200px;
-            padding-left: 0px;
-            
-
-            a {
-                min-width: 200px;
-                padding: 20px;
-                color: white;
-            }
-        }
-
-    }
-
-    .menu-itemActive {
-        display: block;
-    }
 }
