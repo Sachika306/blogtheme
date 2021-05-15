@@ -10,7 +10,7 @@ $(document).ready(function(){
 
     $('.header-nav__md').click(function() {
         $('.search').toggleClass('openSearch');
-        $('#searchbox').focus(); // 検索開いたら自動でinputにフォーカス
+        $('.search > form > input').focus(); // 検索開いたら自動でinputにフォーカス
         if ($('.search').hasClass('openSearch')) {
             $('body').addClass('active');
         } else {
