@@ -2,9 +2,9 @@
   get_header();
 ?>
     
-    <main itemscope itemtype="http://schema.org/Blog" class="container">
+    <main itemscope itemtype="http://schema.org/Blog" itemprop="mainContentOfPage" class="container">
     
-      <div class="article col-md-8" itemprop="mainContentOfPage">
+      <div class="article col-md-8">
         <?php 
           if ( have_posts() ) : 
           while ( have_posts() ) : the_post(); ?>
@@ -42,9 +42,10 @@
             </div>
           </div>
 
-        <?php get_sidebar(); ?>
-        
       </div>
+
+        <?php get_sidebar(); ?>
+
     </main>
 
 <?php
