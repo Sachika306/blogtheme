@@ -6,6 +6,10 @@
   padding-bottom: 80px;
 }
 
+.article-archiveHeading {
+  font-size: 23px;
+}
+
 .article-item {
   border-radius: 5px;
   background-color: white;
