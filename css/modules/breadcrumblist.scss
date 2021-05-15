@@ -2,14 +2,17 @@
 @import '../base/variables2.scss';
 
 .breadcrumblist {
+    @include removeUlButtons();
+    display: flex;
+    flex-wrap: wrap;
     margin: 10px;
-    
-    ol {
-        @include removeUlButtons();
-        display: flex;
 
-        li {
-            font-size: 14px;
-        }
+    li {
+        font-size: 14px;
+        
+    }
+
+    &-divider {
+        margin: 0 3px;
     }
 }
