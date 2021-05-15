@@ -51,6 +51,9 @@
     }
 
     .parentMenu {
+        @include md {
+            width: 50%;
+        }
         width: 80%;
         position: relative;
         list-style: none;
