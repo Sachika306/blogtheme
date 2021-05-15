@@ -2,18 +2,21 @@
 /* responsive */
 /* shareボタン用色 */
 .breadcrumblist {
-  margin: 10px;
-}
-
-.breadcrumblist ol {
   list-style: none;
   padding-left: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 10px;
 }
 
-.breadcrumblist ol li {
+.breadcrumblist li {
   font-size: 14px;
+}
+
+.breadcrumblist-divider {
+  margin: 0 3px;
 }
 /*# sourceMappingURL=breadcrumblist.css.map */

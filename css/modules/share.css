@@ -1,18 +1,5 @@
 @charset "UTF-8";
 /* responsive */
-/* 装飾class */
-.dashedLine {
-  border: dashed 2px lightgray;
-  width: 100%;
-}
-
-/* fontawesomeにないはてぶアイコン追加 */
-.fa-hatena:before {
-  content: "B!";
-  font-family: Verdana;
-  font-weight: bold;
-}
-
 /* shareボタン用色 */
 .share ul {
   list-style: none;
@@ -29,7 +16,7 @@
 .share ul li {
   text-align: right;
   width: 80px;
-  margin-left: 10px;
+  margin: 0 0 0 10px;
 }
 
 .share ul li i {
@@ -41,14 +28,14 @@
 }
 
 .share ul li .fa-facebook-f {
-  background-color: #486c9b;
+  background-color: #4582d1;
 }
 
 .share ul li .fa-twitter {
-  background-color: #3e858f;
+  background-color: #35a7b6;
 }
 
 .share ul li .fa-hatena {
-  background-color: #44739c;
+  background-color: #417ae4;
 }
 /*# sourceMappingURL=share.css.map */
