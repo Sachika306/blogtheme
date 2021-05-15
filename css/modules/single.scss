@@ -6,10 +6,17 @@
         margin: 50px 0px -18px;
         font-weight: bold;
     }
+    
+    ul li {
+        margin: 20px;
+        @include sm {
+            font-size: 15px;
+        }
+    }
 
     p {
         @include sm {
-            font-size: 16px;
+            font-size: 15px;
         }
     }    
 
