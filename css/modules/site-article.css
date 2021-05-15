@@ -1,18 +1,5 @@
 @charset "UTF-8";
 /* responsive */
-/* 装飾class */
-.dashedLine {
-  border: dashed 2px lightgray;
-  width: 100%;
-}
-
-/* fontawesomeにないはてぶアイコン追加 */
-.fa-hatena:before {
-  content: "B!";
-  font-family: Verdana;
-  font-weight: bold;
-}
-
 /* shareボタン用色 */
 .article {
   margin: 0 auto;
@@ -53,7 +40,7 @@
 
 .article-thumbnail img {
   width: 100%;
-  height: 300px;
+  height: auto;
   -o-object-fit: cover;
      object-fit: cover;
 }
