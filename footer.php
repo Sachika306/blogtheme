@@ -22,7 +22,7 @@
                 <!-- ブログ画像のロゴ -->
                 <div itemscope itemtype="https://schema.org/imageObject" class="header-logo">
                   <a href="<?php echo home_url(); ?>" itemprop="url">
-                    <img itemprop="logo" src="https://theme.local/wp-content/uploads/2021/05/logo.webp" alt="Logo">
+                    <img itemprop="logo" src="<?php echo site_url(); ?>/wp-content/uploads/2021/05/logo.webp" alt="Logo">
                   </a>
                   <!-- https://developers.google.com/search/docs/data-types/article#logo-guidelines -->
                 </div>
