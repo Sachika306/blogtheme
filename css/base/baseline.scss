@@ -55,6 +55,13 @@
 
   main {
     padding-top: 40px;
+
+    .container {
+      @include sm {
+        padding: 0;
+      }
+    }
+
   }
 
   input[type="text"] {

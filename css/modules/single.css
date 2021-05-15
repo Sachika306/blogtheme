@@ -1,18 +1,5 @@
 @charset "UTF-8";
 /* responsive */
-/* 装飾class */
-.dashedLine {
-  border: dashed 2px lightgray;
-  width: 100%;
-}
-
-/* fontawesomeにないはてぶアイコン追加 */
-.fa-hatena:before {
-  content: "B!";
-  font-family: Verdana;
-  font-weight: bold;
-}
-
 /* shareボタン用色 */
 .single {
   margin: 0 auto;
@@ -24,9 +11,19 @@
   font-weight: bold;
 }
 
+.single ul li {
+  margin: 20px;
+}
+
+@media (max-width: 530px) {
+  .single ul li {
+    font-size: 15px;
+  }
+}
+
 @media (max-width: 530px) {
   .single p {
-    font-size: 16px;
+    font-size: 15px;
   }
 }
 
