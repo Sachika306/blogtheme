@@ -1,19 +1,6 @@
 @charset "UTF-8";
 /* shareボタン用色 */
 /* responsive */
-/* 装飾class */
-.dashedLine {
-  border: dashed 2px lightgray;
-  width: 100%;
-}
-
-/* fontawesomeにないはてぶアイコン追加 */
-.fa-hatena:before {
-  content: "B!";
-  font-family: Verdana;
-  font-weight: bold;
-}
-
 body {
   background-color: #ebebeb;
   color: #7b7b7b;
@@ -33,14 +20,19 @@ img {
 
 a {
   color: #7b7b7b;
+  text-decoration: none;
 }
 
-a:hover {
+a:active {
+  text-decoration: none;
+}
+
+a:hover, a:focus {
   text-decoration: none;
   color: #7b7b7b;
 }
 
-a:hover p, a:hover h1, a:hover h2, a:hover h3, a:hover h4, a:hover h5, a:hover h6, a:hover span {
+a:hover p, a:hover h1, a:hover h2, a:hover h3, a:hover h4, a:hover h5, a:hover h6, a:hover span, a:focus p, a:focus h1, a:focus h2, a:focus h3, a:focus h4, a:focus h5, a:focus h6, a:focus span {
   opacity: 0.8;
 }
 
@@ -67,5 +59,11 @@ main {
 input[type="text"] {
   padding: 10px;
   height: 50px;
+}
+
+/* 装飾class */
+.dashedLine {
+  border: dashed 2px lightgray;
+  width: 100%;
 }
 /*# sourceMappingURL=baseline.css.map */
