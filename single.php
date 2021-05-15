@@ -5,23 +5,7 @@
     <main role="main">
       <div class="container">
 
-      <div class="breadcrumblist" itemscope itemtype="http://schema.org/BreadcrumbList">
-          <ol>
-            <li itemprop="itemListElement"><a href="<?php echo get_site_url(); ?>" itemprop="url">ホーム</a> > </li>
-            <li>
-              <?php
-                if( is_singular() ) {
-                  $category = get_the_category();
-                  if ( is_single() ) {
-                    the_category(' > ');
-                  }
-                  echo ' > ';
-                  the_title();
-                }
-              ?>
-            </li>
-          </ol>
-        </div>
+        <?php get_template_part('template-parts/breadcrumbList'); ?>
 
         <section class="single col-md-8">
           <article itemscope itemtype ="https://schema.org/BlogPosting" class="single-item">

@@ -6,6 +6,8 @@
     <main role="main" itemscope itemtype="http://schema.org/Blog" itemprop="mainContentOfPage" class="container">
     
         <section class="article col-md-8">
+          
+        <?php get_template_part('template-parts/breadcrumbList'); ?>
         <?php if (empty (get_search_query()) ): ?>
             <h1 class="article-archiveHeading">検索結果</h1>
             <div class="article-search">

@@ -11,6 +11,17 @@
   font-weight: bold;
 }
 
+.single h3:before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f105";
+  color: #78a2a7;
+  margin-right: 10px;
+}
+
+.single h3 {
+  font-size: 20px;
+}
+
 .single ul li {
   margin: 20px;
 }
