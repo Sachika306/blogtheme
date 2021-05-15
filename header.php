@@ -22,19 +22,13 @@
     <!-- End Google Tag Manager (noscript) -->
 
   <header class="header">
-      <div class="header-title" itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
-        <div itemprop="logo" itemscope itemtype="https://schema.org/imageObject" class="header-logo">
-        <?php is_home() ? print '<h1 style="margin: 0px;">' : print '<h2 style="margin: 0px;">' ?>
-          <a href="<?php echo get_site_url(); ?>" itemprop="url">
-            <img src="http://selftaught056.com/wp-content/uploads/2021/05/logo.png" alt="Logo">
-            <!-- https://developers.google.com/search/docs/data-types/article#logo-guidelines -->
-          </a>
-          <?php is_home() ? print '</h1>' : print '</h2>' ?>
-        </div>
-      </div>
-      
       <!-- ヘッダーナビゲーション -->
       <div class="header-nav">
+        <div class="header-titlewrapper" itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+          <a href="<?php echo home_url(); ?>" itemprop="url">
+            <h1 class="header-title"><?php echo get_bloginfo('name'); ?></h1>
+          </a>
+        </div>
         <?php get_template_part('/template-parts/categoryMenu');?>
 
         <!-- 検索ボタン -->
@@ -47,7 +41,6 @@
           <i class="fa fa-bars fa-lg"></i>
         </div>
       </div>
-
     </header>
 
     
