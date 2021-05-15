@@ -22,7 +22,7 @@
                 <!-- ブログ画像のロゴ -->
                 <div itemprop="logo" itemscope itemtype="https://schema.org/imageObject" class="header-logo">
                   <a href="<?php echo home_url(); ?>" itemprop="url">
-                    <img src="http://selftaught056.com/wp-content/uploads/2021/05/logo.png" alt="Logo">
+                    <img src="https://selftaught056.com/wp-content/uploads/2021/05/logo.png" alt="Logo">
                   </a>
                   <!-- https://developers.google.com/search/docs/data-types/article#logo-guidelines -->
                 </div>
