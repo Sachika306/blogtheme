@@ -6,7 +6,9 @@
         <?php
         $i = 1;
         $query = new WP_query( array(
-            'order' => 'DESC'
+            'posts_per_page' => 3,
+            'meta_key' => 'post_views_count', // アクセス数ごとに並び替える
+            'orderby'   => 'meta_value_num' // アクセス数ごとに並び替える
         ));
         if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post();
         ?>

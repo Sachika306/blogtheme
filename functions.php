@@ -12,21 +12,37 @@ add_action('wp_enqueue_scripts', 'add_css_js'); //CSSとJSの読み込み
 
 
 /*
- * Set post views count using post meta
+ * アクセス数の集計
  */
-function setPostViews($postID) {
-    $countKey = 'post_views_count';
-    $count = get_post_meta($postID, $countKey, true);
+function set_post_views($postID) { 
+    $count_key = 'post_views_count';
+    $count = get_post_meta($postID, $count_key, true);
     if($count==''){
         $count = 0;
-        delete_post_meta($postID, $countKey);
-        add_post_meta($postID, $countKey, '0');
+        delete_post_meta($postID, $count_key);
+        add_post_meta($postID, $count_key, '0');
     }else{
-        $count++;
-        update_post_meta($postID, $countKey, $count);
+      $count++;
+      update_post_meta($postID, $count_key, $count);
     }
-}
-
+  }
+	
+function is_bot() { //クローラーのアクセス判別
+    $ua = $_SERVER['HTTP_USER_AGENT'];
+   
+    $bot = array(
+          "googlebot",
+          "msnbot",
+          "yahoo"
+    );
+    foreach( $bot as $bot ) {
+      if (stripos( $ua, $bot ) !== false){
+        return true;
+      }
+    }
+    return false;
+  }
+  
 
 /*
  * ナビゲーション メニューの設定
