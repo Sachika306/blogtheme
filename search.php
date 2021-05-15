@@ -6,14 +6,14 @@
     <main role="main" itemscope itemtype="http://schema.org/Blog" itemprop="mainContentOfPage" class="container">
     
         <section class="article col-md-8">
-        <h1>検索結果</h1>
         <?php if (empty (get_search_query()) ): ?>
+            <h1 class="article-archiveHeading">検索結果</h1>
             <div class="article-search">
                 <?php get_search_form(); ?>
             </div>
             <p>キーワードが未入力でした。<br>もう一度検索してみてください。</p>
         <?php elseif (have_posts()) : ?>
-            <h2>「<?php echo get_search_query(); ?>」に関する記事（<?php echo $wp_query->found_posts; ?>件）</h2>
+            <h1 class="article-archiveHeading">「<?php echo get_search_query(); ?>」に関する記事（<?php echo $wp_query->found_posts; ?>件）</h1>
             <?php while(have_posts()): the_post(); ?>
                 <article itemscope itemtype ="https://schema.org/BlogPosting" class="article-item">
                     <h2 itemprop="headline" class="article-title" >
@@ -36,6 +36,7 @@
                 </article>
             <?php endwhile; ?>
         <?php else : ?>
+            <h1 class="article-archiveHeading">検索結果</h1>
             <div class="article-search">
                 <?php get_search_form(); ?>
             </div>

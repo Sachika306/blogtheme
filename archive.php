@@ -5,7 +5,17 @@
     <main role="main" itemscope itemtype="http://schema.org/Blog" itemprop="mainContentOfPage" class="container">
     
         <section class="article col-md-8">
-        <h1><?php the_category('/'); ?>に関する記事</h1>
+        <h1 class="article-archiveHeading">
+          <?php
+            $parent_cat_integer = get_the_category()[0]->category_parent;
+            if ($parent_cat_integer !== null) {
+              echo '「'.get_cat_name($parent_cat_integer).'」>';
+            } 
+            foreach ( ( get_the_category() ) as $category ) {
+              echo '「'.$category->cat_name.'」';
+            }
+          ?>の記事
+        </h1>
 
         <?php 
           if ( have_posts() ) : 
