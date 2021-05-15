@@ -50,7 +50,6 @@
         <?php get_sidebar(); ?>
       </div>
     </main>
-
-<?php
-  get_footer();
-?>
+    
+    <?php get_template_part('template-parts/accessCount'); ?>
+<?php get_footer(); ?>
