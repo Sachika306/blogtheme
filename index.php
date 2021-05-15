@@ -23,7 +23,7 @@
             
             <div class="article-metabox">
               <?php get_template_part('template-parts/dateAndCategory'); ?>
-              <p class="article-metabox__description" itemprop="description"><?php the_excerpt(); ?></p>
+              <div class="article-metabox__description" itemprop="description"><?php the_excerpt(); ?></div>
             </div>
             <div class="article-readmore">
               <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" itemprop="url">&raquo; READ</a>
