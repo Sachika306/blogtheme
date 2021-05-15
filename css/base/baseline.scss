@@ -20,9 +20,14 @@
 
   a {
     color: $lightGray;
+    text-decoration: none;
   }
 
-  a:hover {
+  a:active {
+    text-decoration: none;
+  }
+
+  a:hover, a:focus {
     text-decoration: none;
     color: $lightGray;
     
@@ -55,4 +60,9 @@
   input[type="text"] {
       padding: 10px;
       height: 50px;
+  }
+
+  /* 装飾class */
+  .dashedLine {
+    border: dashed 2px lightgray; width: 100%;
   }

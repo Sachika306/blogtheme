@@ -1,15 +1,2 @@
-@charset "UTF-8";
 /* responsive */
-/* 装飾class */
-.dashedLine {
-  border: dashed 2px lightgray;
-  width: 100%;
-}
-
-/* fontawesomeにないはてぶアイコン追加 */
-.fa-hatena:before {
-  content: "B!";
-  font-family: Verdana;
-  font-weight: bold;
-}
 /*# sourceMappingURL=utility-classes.css.map */
