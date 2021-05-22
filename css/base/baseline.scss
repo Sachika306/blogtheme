@@ -77,3 +77,10 @@
   .dashedLine {
     border: dashed 2px lightgray; width: 100%;
   }
+
+  // pにmargin36px指定しているので、blockquoteを使うと上の部分がうまく表示されないのを防ぐ
+  blockquote {
+    p {
+      margin: 0px;
+    }
+  }
