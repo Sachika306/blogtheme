@@ -1,21 +1,8 @@
 @charset "UTF-8";
 /* responsive */
-/* 装飾class */
-.dashedLine {
-  border: dashed 2px lightgray;
-  width: 100%;
-}
-
-/* fontawesomeにないはてぶアイコン追加 */
-.fa-hatena:before {
-  content: "B!";
-  font-family: Verdana;
-  font-weight: bold;
-}
-
 /* shareボタン用色 */
 .pagination {
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -25,8 +12,14 @@
           justify-content: space-between;
 }
 
+@media (max-width: 530px) {
+  .pagination {
+    width: 100%;
+  }
+}
+
 .pagination-next, .pagination-prev {
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .pagination-next a, .pagination-prev a {
@@ -39,8 +32,14 @@
 }
 
 .pagination-next a, .pagination-prev a {
-  padding: 5px 20px;
+  color: white;
+  padding: 13px 20px;
   font-weight: 400;
-  letter-spacing: 2px;
+  border-radius: 5px;
+  background-color: #208997;
+}
+
+.pagination-next a:hover, .pagination-prev a:hover {
+  opacity: 0.8;
 }
 /*# sourceMappingURL=pagination.css.map */
