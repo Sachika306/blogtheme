@@ -31,7 +31,7 @@
           
           <section class="related">
             <div class="dashedLine"></div>
-            <h3>「<a href="">カテゴリー</a>」のおすすめ記事</h3>
+            <h3>「<a href=""><?php echo get_the_category()[0]->name; ?></a>」のおすすめ記事</h3>
 
             <?php 
               $relatedArticles = new WP_query( array(
