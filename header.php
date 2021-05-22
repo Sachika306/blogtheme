@@ -11,7 +11,7 @@
     <!-- End Google Tag Manager -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="shortcut icon" href="/path/to/favicon.ico">
+    <link rel="shortcut icon" href="<?php echo site_url(); ?>/wp-content/uploads/2021/05/favicon-16x16.webp">
     <?php wp_head(); ?>
   </head>
   
