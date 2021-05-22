@@ -1,18 +1,5 @@
 @charset "UTF-8";
 /* responsive */
-/* 装飾class */
-.dashedLine {
-  border: dashed 2px lightgray;
-  width: 100%;
-}
-
-/* fontawesomeにないはてぶアイコン追加 */
-.fa-hatena:before {
-  content: "B!";
-  font-family: Verdana;
-  font-weight: bold;
-}
-
 /* shareボタン用色 */
 .header {
   display: -webkit-box;
@@ -159,7 +146,7 @@
   opacity: 0.9;
   position: fixed;
   right: -50%;
-  height: 100vh;
+  height: 100%;
   width: 50%;
   -webkit-transition: 0.4s;
   transition: 0.4s;
