@@ -25,7 +25,7 @@
                 <div class="article-metabox__description" itemprop="description"><?php the_excerpt(); ?></div>
               </div>
               <div class="article-readmore">
-                <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" itemprop="url">&raquo; READ</a>
+                <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" itemprop="url">記事を読む</a>
               </div>
             </article>
 
