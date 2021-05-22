@@ -57,7 +57,7 @@
               <?php previous_posts_link('&laquo; PREV'); ?>
             </div>
             <div class="pagination-next">
-              <?php next_posts_link('NEXT &raquo;'); ?>
+              <?php next_posts_link('NEXT'); ?>
             </div>
           </div>
 
