@@ -1,5 +1,6 @@
 @charset "UTF-8";
 /* shareボタン用色 */
+/* ボタン */
 /* responsive */
 body {
   background-color: #ebebeb;
@@ -75,6 +76,34 @@ input[type="text"] {
 .dashedLine {
   border: dashed 2px lightgray;
   width: 100%;
+}
+
+.ctaBtn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto;
+  min-width: 60%;
+  padding: 8px 0px;
+  color: white;
+  border-radius: 5px;
+  font-weight: 700;
+  background-color: #208997;
+}
+
+.ctaBtn:hover {
+  opacity: 0.8;
 }
 
 blockquote p {
