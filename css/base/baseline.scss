@@ -78,6 +78,25 @@
     border: dashed 2px lightgray; width: 100%;
   }
 
+
+  .ctaBtn {
+    @include removeBtnDesign();
+    // 中央よせ
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    // デザイン
+    min-width: 60%;
+    padding: 8px 0px;
+    color: white;
+    border-radius: 5px;
+    font-weight: 700;
+    background-color: $ctaGreen;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
   // pにmargin36px指定しているので、blockquoteを使うと上の部分がうまく表示されないのを防ぐ
   blockquote {
     p {
