@@ -33,4 +33,37 @@ $(document).ready(function(){
     $( ".menu-item" ).mouseout(function() {  // mouse enter
         $( this ).find( " > .childMenu" ).toggleClass('menu-itemActive');
     });
+
+    var idcount = 1;
+    var toc = '<ol>';
+    var level = 0;
+    $("article h2,article h3", this).each(function () {
+        this.id = "toc-id" + idcount;
+        idcount++;
+        if (this.nodeName.toLowerCase() == "h2") {
+        if (level > 0) {
+            toc += '</ol></li>';
+            level = 0;
+        }
+        } else if (this.nodeName.toLowerCase() == "h3") {
+        if (level == 0) {
+            toc += '<li><ol>';
+            level = 1;
+        }
+        }
+        toc += '<li><a href="#' + this.id + '">' + $(this).html() + "</a></li>\n";
+    });
+    toc += '</ol>';
+    if ($("article h2")[0]) {
+        $("#toc").html('<div class="toc-title">Contents</div>' + toc);
+    }
+
+    $('a[href^="#"]').click(function(){
+        var	speed = 400,
+            href= $(this).attr("href"),
+            target = $(href == "#" || href == "" ? 'html' : href),
+            position = target.offset().top;
+        $('body,html').animate({scrollTop:position}, speed, 'swing');
+        return false;
+    });
 });
