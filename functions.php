@@ -108,6 +108,23 @@ function custom_mime_types( $mimes ) {
 }
 add_filter( 'upload_mimes', 'custom_mime_types' );
 
+
+/*
+ * TOCを表示させる
+ */
+function toc_in($the_content) {
+  if (is_single()) {
+    $toc = "<div id=\"toc\"></div>";
+ 
+    $h2 = '/<h2.*?>/i';//H2見出し
+    if ( preg_match( $h2, $the_content, $h2s )) {
+      $the_content  = preg_replace($h2, $toc.$h2s[0], $the_content, 1);
+    }
+  }
+  return $the_content;
+}
+add_filter('the_content','toc_in');
+
 /*
  * そのほか
  */
