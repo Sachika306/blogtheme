@@ -17,25 +17,9 @@
         <?php elseif (have_posts()) : ?>
             <h1 class="article-archiveHeading">「<?php echo get_search_query(); ?>」に関する記事（<?php echo $wp_query->found_posts; ?>件）</h1>
             <?php while(have_posts()): the_post(); ?>
-                <article itemscope itemtype ="https://schema.org/BlogPosting" class="article-item">
-                    <h2 itemprop="headline" class="article-title" >
-                    <a href="<?php the_permalink(); ?>" itemprop="mainEntityOfPage"><?php the_title(); ?></a>
-                    </h2>
-                    <div class="article-thumbnail" itemscope itemtype="http://schema.org/ImageObject">
-                    <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" itemprop="url">
-                      <?php get_template_part('template-parts/thumbnail'); ?>
-                        <!--  画像幅は696 ピクセル以上　https://developers.google.com/search/docs/data-types/article#non-amp -->
-                    </a>
-                    </div>
-                    
-                    <div class="article-metabox">
-                    <?php get_template_part('template-parts/dateAndCategory'); ?>
-                    <p class="article-metabox__description" itemprop="description"><?php the_excerpt(); ?></p>
-                    </div>
-                    <div class="article-readmore">
-                    <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" itemprop="url">&raquo; READ</a>
-                    </div>
-                </article>
+
+            <?php echo get_template_part('/template-parts/articleIndex'); ?>
+
             <?php endwhile; ?>
         <?php else : ?>
             <h1 class="article-archiveHeading">検索結果</h1>
