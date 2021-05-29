@@ -74,7 +74,7 @@ function add_posts_columns_thumbnail($columns) {
 function add_posts_columns_thumbnail_row($column_name, $post_id) {
   if ( 'thumbnail' == $column_name ) {
     $thumb = get_the_post_thumbnail($post_id, array(100,100), 'thumbnail');
-    echo ( $thumb ) ? $thumb : '－';
+    echo ( $thumb ) ? 'あり' : '－';
   }
 }
 add_filter( 'manage_posts_columns', 'add_posts_columns_thumbnail' );
@@ -113,4 +113,3 @@ add_filter( 'upload_mimes', 'custom_mime_types' );
  */
 remove_filter('pre_user_description', 'wp_filter_kses'); //プロフィールの自己紹介欄でHTMLを適用できるようにする
 add_theme_support('post-thumbnails'); // Thumbnailを使えるようにする
-
