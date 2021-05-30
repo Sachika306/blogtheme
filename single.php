@@ -62,8 +62,8 @@
               }
               wp_reset_postdata(); // Restore original post data.
               ?>
-
           </section>
+
         </section>
 
         <?php get_sidebar(); ?>
