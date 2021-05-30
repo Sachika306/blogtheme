@@ -1,0 +1,54 @@
+@charset "UTF-8";
+/* responsive */
+/* shareボタン用色 */
+/* ボタン */
+#toc {
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 5px;
+  padding: 30px 20px;
+  background-color: #f2f7f8;
+}
+
+#toc ol {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 10px;
+}
+
+#toc ol li {
+  margin-top: 10px;
+}
+
+#toc ol ol li {
+  padding-left: 10%;
+}
+
+#toc ol a {
+  border-bottom: none;
+}
+
+#toc ol a:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 530px) {
+  #toc ol a {
+    font-size: 16px;
+  }
+}
+
+#toc .toc-title {
+  letter-spacing: 3px;
+  font-size: 30px;
+  color: #78a2a7;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 530px) {
+  #toc .toc-title {
+    font-size: 25px;
+  }
+}
+/*# sourceMappingURL=toc.css.map */
