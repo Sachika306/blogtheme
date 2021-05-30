@@ -18,7 +18,8 @@
         font-size: 20px;
     }
     
-    ul li {
+    ul li,
+    ol li {
         margin: 20px;
         @include sm {
             font-size: 15px;

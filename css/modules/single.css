@@ -1,6 +1,7 @@
 @charset "UTF-8";
 /* responsive */
 /* shareボタン用色 */
+/* ボタン */
 .single {
   margin: 0 auto;
   padding-bottom: 80px;
@@ -22,12 +23,14 @@
   font-size: 20px;
 }
 
-.single ul li {
+.single ul li,
+.single ol li {
   margin: 20px;
 }
 
 @media (max-width: 530px) {
-  .single ul li {
+  .single ul li,
+  .single ol li {
     font-size: 15px;
   }
 }
