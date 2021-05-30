@@ -1,0 +1,46 @@
+@import '../base/utility-classes.scss';
+@import '../base/variables2.scss';
+
+#toc {
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 5px;
+    padding: 30px 20px;
+    background-color: $veryLightGreen;
+
+    ol { 
+        @include removeUlButtons();
+        margin-top: 10px;
+
+        li {
+            margin-top: 10px;
+        }
+
+        ol li {
+            padding-left: 10%;
+        }
+
+        a {
+            border-bottom: none;
+            &:hover {
+                opacity: 0.8;
+            }
+            @include sm()  {
+                font-size: 16px;
+            }
+        }
+    }
+
+    .toc-title {
+        letter-spacing: 3px;
+        font-size: 30px;
+        
+            @include sm()  {
+                font-size: 25px;
+            }
+
+        color: $lightGreen;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}
