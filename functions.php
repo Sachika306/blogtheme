@@ -77,6 +77,7 @@ function add_posts_columns_thumbnail_row($column_name, $post_id) {
     echo ( $thumb ) ? 'あり' : '－';
   }
 }
+
 add_filter( 'manage_posts_columns', 'add_posts_columns_thumbnail' );
 add_action( 'manage_posts_custom_column', 'add_posts_columns_thumbnail_row', 10, 2 );
 
@@ -98,6 +99,24 @@ function add_posts_columns_excerpt_row($column_name, $post_id) {
 
 add_filter( 'manage_posts_columns', 'add_posts_columns_excerpt' );
 add_action( 'manage_posts_custom_column', 'add_posts_columns_excerpt_row', 10, 2 );
+
+
+/*
+ * 管理画面の記事一覧に二回チェック欄を表示
+ */
+function add_posts_columns_check($columns) {
+  $columns['check'] = 'ダブルチェック'; 
+  return $columns;
+}
+function add_posts_columns_check_row($column_name, $post_id) {
+  if ( 'check' == $column_name ) {
+    echo "<input type='checkbox'></input>";
+  }
+}
+
+add_filter( 'manage_posts_columns', 'add_posts_columns_check' );
+add_action( 'manage_posts_custom_column', 'add_posts_columns_check_row', 10, 2 );
+
 
 /*
  * WEBP対応
