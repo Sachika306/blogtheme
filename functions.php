@@ -161,6 +161,31 @@ function toc_in($the_content) {
 }
 add_filter('the_content','toc_in');
 
+
+/*
+ * ショートコード追加＆クイックタグAPIでエディタに表示
+ */
+function ctaBtn( $atts, $content = null ) {
+  extract( shortcode_atts( array(
+      'url' => '',
+      'quote' => "'",
+  ), $atts ) );
+   
+  return '<button onclick="window.open('.$quote.$url.$quote.','.$quote.'blank'.$quote.')" class="ctaBtn">' . $content . '</button>';
+}
+add_shortcode('ctaBtn', 'ctaBtn');
+
+function themes_add_quicktags () {
+  if ( wp_script_is( 'quicktags' ) ) {
+  $html  = '<script>';
+  $html .= 'QTags.addButton( "eg_paragraph", "ctaBtn", "[ctaBtn url=]", "[/ctaBtn]", "ctaBtn", "Paragraph tag", 1 );';
+  $html .= '</script>';
+  
+  echo $html;
+  }
+ }
+ add_action( 'admin_print_footer_scripts', 'themes_add_quicktags' );
+
 /*
  * そのほか
  */

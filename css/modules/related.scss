@@ -25,14 +25,5 @@
         @include relatedImg();
     }
 
-    /* fontawesomeにないはてぶアイコン追加 */
-    .fa-hatena {
-
-        &:before {
-            content: "B!";
-            font-family: Verdana;
-            font-weight: bold;
-        }
-    }
 }
 
