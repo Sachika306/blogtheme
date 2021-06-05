@@ -1,10 +1,10 @@
 @charset "UTF-8";
 /* responsive */
 /* shareボタン用色 */
+/* ボタン */
 .related {
   background-color: white;
   padding: 30px 70px 60px 70px;
-  /* fontawesomeにないはてぶアイコン追加 */
 }
 
 @media (max-width: 530px) {
@@ -34,11 +34,5 @@
   width: 300px;
   -o-object-fit: cover;
      object-fit: cover;
-}
-
-.related .fa-hatena:before {
-  content: "B!";
-  font-family: Verdana;
-  font-weight: bold;
 }
 /*# sourceMappingURL=related.css.map */

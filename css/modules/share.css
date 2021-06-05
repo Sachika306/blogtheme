@@ -1,6 +1,11 @@
 @charset "UTF-8";
 /* responsive */
 /* shareボタン用色 */
+/* ボタン */
+.share {
+  margin: 20px auto;
+}
+
 .share ul {
   list-style: none;
   padding-left: 0;
@@ -37,5 +42,12 @@
 
 .share ul li .fa-hatena {
   background-color: #417ae4;
+  /* fontawesomeにないはてぶアイコン追加 */
+}
+
+.share ul li .fa-hatena:before {
+  content: "B!";
+  font-family: Verdana;
+  font-weight: bold;
 }
 /*# sourceMappingURL=share.css.map */
