@@ -93,7 +93,7 @@ input[type="text"] {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 0 auto;
+  margin: 10px auto;
   min-width: 60%;
   padding: 8px 0px;
   color: white;

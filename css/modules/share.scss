@@ -2,7 +2,7 @@
 @import '../base/variables2.scss';
 
 .share {
-    
+    margin: 20px auto;
 
     ul {
         @include removeUlButtons();
@@ -33,6 +33,13 @@
 
             .fa-hatena {
                 background-color: $hatena;
+
+                /* fontawesomeにないはてぶアイコン追加 */
+                &:before {
+                    content: "B!";
+                    font-family: Verdana;
+                    font-weight: bold;
+                }
             }
         }
 
