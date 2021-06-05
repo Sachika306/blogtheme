@@ -12,7 +12,7 @@
             if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post();
             ?>
 
-                <article class="topArticles-element article-item" itemscope itemtype ="https://schema.org/BlogPosting">
+                <article class="topArticles-element" itemscope itemtype ="https://schema.org/BlogPosting">
                     <span class="topArticles-element__num"><?php echo ($i); $i++; ?></span>
                     <h4 class="topArticles-element__title" itemprop="headline"><a href="<?php the_permalink(); ?>" itemprop="mainEntityOfPage"><?php the_title(); ?></a></h4>
                 </article>
