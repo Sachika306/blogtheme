@@ -20,7 +20,7 @@ $(document).ready(function(){
 
     // 検索開いてるとき、ボックス以外の箇所をクリックしたら閉じる
     $('.search').click(function(e) {
-        if (!$(e.target).closest('#searchbox').length) {
+        if (!$(e.target).closest('.form-control').length) {
             $('.search').removeClass('openSearch');　
             $('body').removeClass('active');
           }
@@ -34,6 +34,8 @@ $(document).ready(function(){
         $( this ).find( " > .childMenu" ).toggleClass('menu-itemActive');
     });
 
+
+    //　目次の自動作成
     var idcount = 1;
     var toc = '<ol>';
     var level = 0;
@@ -54,10 +56,13 @@ $(document).ready(function(){
         toc += '<li><a href="#' + this.id + '">' + $(this).html() + "</a></li>\n";
     });
     toc += '</ol>';
+
+    // h2の前に目次を挿入
     if ($("article h2")[0]) {
         $("#toc").html('<div class="toc-title">Contents</div>' + toc);
     }
 
+    //　目次をクリックしたときに移動
     $('a[href^="#"]').click(function(){
         var	speed = 400,
             href= $(this).attr("href"),
