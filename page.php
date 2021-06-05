@@ -2,12 +2,12 @@
   get_header();
 ?>
 
-    <main role="main">
+    <main>
       <div class="container">
 
       <?php get_template_part('template-parts/breadcrumbList'); ?>
 
-        <section class="single col-md-8">
+        <div class="single col-md-8">
           <article itemscope itemtype ="https://schema.org/BlogPosting" class="single-item">
             <h1 class="single-title" itemprop="headline"><?php the_title(); ?></h1>
             <div class="single-thumbnail" itemscope itemtype="http://schema.org/ImageObject">
@@ -20,7 +20,7 @@
               <?php the_content(); ?>
             </div>
           </article>
-        </section>
+        </div>
 
         <?php get_sidebar(); ?>
       </div>
