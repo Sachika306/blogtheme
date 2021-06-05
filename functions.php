@@ -17,13 +17,13 @@ add_action('wp_enqueue_scripts', 'add_css_js'); //CSSとJSの読み込み
 function set_post_views($postID) { 
     $count_key = 'post_views_count';
     $count = get_post_meta($postID, $count_key, true);
-    if($count==''){
+    if ($count=='') {
         $count = 0;
         delete_post_meta($postID, $count_key);
         add_post_meta($postID, $count_key, '0');
-    }else{
-      $count++;
-      update_post_meta($postID, $count_key, $count);
+     } else {
+        $count++;
+        update_post_meta($postID, $count_key, $count);
     }
   }
 
@@ -116,6 +116,23 @@ function add_posts_columns_check_row($column_name, $post_id) {
 
 add_filter( 'manage_posts_columns', 'add_posts_columns_check' );
 add_action( 'manage_posts_custom_column', 'add_posts_columns_check_row', 10, 2 );
+
+
+/*
+ * 管理画面の記事一覧に「PV数」欄を表示
+ */
+function add_posts_columns_pv($columns) {
+    $columns['pv'] = 'PV数'; 
+    return $columns;
+  }
+  function add_posts_columns_pv_row($column_name, $post_id) {
+    if ( 'pv' == $column_name ) {
+        echo get_post_meta(get_the_ID(), 'post_views_count')[0]; 
+    }
+  }
+  
+  add_filter( 'manage_posts_columns', 'add_posts_columns_pv' );
+  add_action( 'manage_posts_custom_column', 'add_posts_columns_pv_row', 10, 2 );
 
 
 /*
