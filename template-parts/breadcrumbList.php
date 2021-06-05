@@ -1,16 +1,16 @@
 <ol class="breadcrumblist" itemscope itemtype="http://schema.org/BreadcrumbList">
     <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-        <a itemprop="item" href="<?php echo get_site_url(); ?>" itemprop="url">
+        <a itemprop="item url" href="<?php echo get_site_url(); ?>">
         <span itemprop="name">ホーム</span>
         </a>
         <meta itemprop="position" content="1">
     </li>
-    <span class="breadcrumblist-divider">></span>
+    <li class="breadcrumblist-divider">></li>
 
     <?php
     $i = 1;
     
-    // アーカイブページの場合のパンクず
+    // アーカイブページの場合のパンくず
     if (is_archive()) {
         $currentArcCat = get_category(get_query_var('cat'));
         $parentCatInt = $currentArcCat->category_parent;
@@ -19,7 +19,7 @@
         // 親カテゴリがある場合
         if ($parentCatInt !== 0) {
             echo '<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">';
-            echo '<a itemprop="item" href="'.get_category_link($parentCatInt).'" itemprop="url">';
+            echo '<a itemprop="item url" href="'.get_category_link($parentCatInt).'">';
             echo '<span itemprop="name">'.get_cat_name($parentCatInt).'</span>';
             echo '</a>';
             $i ++;
@@ -44,7 +44,7 @@
         $parent = get_category($parentCatInt);
         if ($parentCatInt !== 0) {
             echo '<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">';
-            echo '<a itemprop="item" href="'.get_category_link($parentCatInt).'" itemprop="url">';
+            echo '<a itemprop="item url" href="'.get_category_link($parentCatInt).'">';
             echo '<span itemprop="name">'.$parent->cat_name.'</span>';
             echo '</a>';
             $i ++;
@@ -55,7 +55,7 @@
 
         // 属するカテゴリの名前
         echo '<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">';
-        echo '<a itemprop="item" href="'.get_category_link($currentCat->cat_ID).'" itemprop="url">';
+        echo '<a itemprop="item url" href="'.get_category_link($currentCat->cat_ID).'">';
         echo '<span itemprop="name">'.$currentCat->cat_name.'</span>';
         echo '</a>';
         $i ++;
