@@ -5,4 +5,4 @@
     <?php endif; ?>
     <?php the_category('/'); ?>
 </p>
-<p class="<?php is_home() ? print 'article' : print 'single' ?>-metabox__date">あああ</p>
+<p class="<?php is_home() ? print 'article' : print 'single' ?>-metabox__date"></p>
