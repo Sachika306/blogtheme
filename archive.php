@@ -2,9 +2,9 @@
   get_header();
 ?>
     
-    <main role="main" itemscope itemtype="http://schema.org/Blog" itemprop="mainContentOfPage" class="container">
+    <main itemscope itemtype="http://schema.org/Blog" class="container">
 
-        <section class="article col-md-8">
+        <section class="article col-md-8" itemprop="mainContentOfPage">
         <?php get_template_part('template-parts/breadcrumbList'); ?>
 
         <!-- カテゴリーの見出し -->
