@@ -102,15 +102,38 @@ add_action( 'manage_posts_custom_column', 'add_posts_columns_excerpt_row', 10, 2
 
 
 /*
- * 管理画面の記事一覧に二回チェック欄を表示
+ * 各投稿のカスタムフィールドに「is_checked」を表示
+ * 管理画面の記事一覧にダブルチェックの欄を表示
  */
+
+// 各投稿のカスタムフィールドに「is_checked = 0」をデフォルトで表示
+function set_is_checked($post_ID){
+  //　現在のフィールド値を取得
+  $current_field_value = esc_html(get_post_meta($post_ID,'is_checked', true));
+  //　フィールド値が未設定でリビジョンがない場合（新規投稿の場合）、「is_checked = 0」のカスタムフィールドを表示
+  if ($current_field_value == '' && !wp_is_post_revision($post_ID)){
+          add_post_meta($post_ID, 'is_checked', 0);
+  }
+  return $post_ID;
+}
+add_action('wp_insert_post','set_is_checked');
+
+// 管理画面の記事一覧にダブルチェックの欄を追加
 function add_posts_columns_check($columns) {
   $columns['check'] = 'ダブルチェック'; 
   return $columns;
 }
+
+// 管理画面の記事にダブルチェックの項目を表示
 function add_posts_columns_check_row($column_name, $post_id) {
-  if ( 'check' == $column_name ) {
-    echo "<input type='checkbox'></input>";
+  // カスタムフィールド 'is_checked' の値を取得
+  $isChecked = get_post_meta($post_id, 'is_checked')[0];
+  // カスタムフィールドの列が「ダブルチェック」かつ、'is_checked'の値が1ではない（＝チェック作業が終わってない）場合
+  if ('check' == $column_name  && $isChecked != 1) {
+    echo "<input type='checkbox'></input>"; //チェックが入っていないボックスを表示
+  // カスタムフィールドの列が「ダブルチェック」かつ、'is_checked'の値が1（＝チェック作業が終わっている）場合
+  } else if ( 'check' == $column_name && $isChecked == 1 ) {
+    echo "<input type='checkbox' checked></input>"; //チェックが入っているボックスを表示
   }
 }
 
