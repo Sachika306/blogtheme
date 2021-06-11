@@ -61,7 +61,7 @@
         $i ++;
         echo '<meta itemprop="position" content="'.$i.'">';
         echo '</li>';
-        echo '<span class="breadcrumblist-divider">></span>';
+        echo '<p class="breadcrumblist-divider">></p>';
 
         // 個別記事のタイトル
         echo '<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">';

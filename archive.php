@@ -4,11 +4,11 @@
     
     <main itemscope itemtype="http://schema.org/Blog" class="container">
 
-        <section class="article col-md-8" itemprop="mainContentOfPage">
+      <section class="article col-md-8" itemprop="mainContentOfPage">
         <?php get_template_part('template-parts/breadcrumbList'); ?>
 
         <!-- カテゴリーの見出し -->
-        <h1 class="article-archiveHeading">
+        <h2 class="article-archiveHeading">
           <?php
             // 現在開いているページのカテゴリと親のカテゴリーの情報取得
             $currentCategory = get_category(get_query_var('cat'));
@@ -44,10 +44,10 @@
             </div>
           </div>
 
-        </section>
+      </section>
 
-        <?php get_sidebar(); ?>
-      </div>
+      <?php get_sidebar(); ?>
+        
     </main>
     
     <?php get_template_part('template-parts/accessCount'); ?>
