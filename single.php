@@ -2,7 +2,7 @@
   get_header();
 ?>
 
-    <main role="main">
+    <main>
       <div class="container">
 
         <?php get_template_part('template-parts/breadcrumbList'); ?>
