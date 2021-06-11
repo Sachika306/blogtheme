@@ -31,16 +31,38 @@
         }
     }
 
+    // スマホのときは目次を閉じさせておく
+    .toc-list {
+
+        &__close {
+            display: none;
+        }
+
+        &__open {
+            display: block;
+        }
+    }
+
     .toc-title {
-        letter-spacing: 3px;
-        font-size: 30px;
-        
+        display: flex;
+        justify-content: center;
+        color: $lightGreen;
+        margin-bottom: 20px;
+
+        &__contents {
+            font-size: 30px;
+            letter-spacing: 3px;
             @include sm()  {
                 font-size: 25px;
             }
+        }
+    }
 
-        color: $lightGreen;
+    .toc-oc {
         text-align: center;
-        margin-bottom: 20px;
+        color: $lightGreen;
+        margin-left: 10px;
+        width: 60px;
+        letter-spacing: 1.5px;
     }
 }
