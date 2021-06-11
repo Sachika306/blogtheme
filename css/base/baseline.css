@@ -117,4 +117,8 @@ input[type="text"] {
 blockquote p {
   margin: 0px;
 }
+
+.wp-embedded-content {
+  width: 100%;
+}
 /*# sourceMappingURL=baseline.css.map */
