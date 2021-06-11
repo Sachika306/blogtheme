@@ -38,17 +38,41 @@
   }
 }
 
+#toc .toc-list__close {
+  display: none;
+}
+
+#toc .toc-list__open {
+  display: block;
+}
+
 #toc .toc-title {
-  letter-spacing: 3px;
-  font-size: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   color: #78a2a7;
-  text-align: center;
   margin-bottom: 20px;
 }
 
+#toc .toc-title__contents {
+  font-size: 30px;
+  letter-spacing: 3px;
+}
+
 @media (max-width: 530px) {
-  #toc .toc-title {
+  #toc .toc-title__contents {
     font-size: 25px;
   }
+}
+
+#toc .toc-oc {
+  text-align: center;
+  color: #78a2a7;
+  margin-left: 10px;
+  width: 60px;
+  letter-spacing: 1.5px;
 }
 /*# sourceMappingURL=toc.css.map */
