@@ -8,6 +8,13 @@
   border-radius: 5px;
   padding: 30px 20px;
   background-color: #f2f7f8;
+  border-top: 3px solid #78a2a7;
+}
+
+@media (max-width: 530px) {
+  #toc {
+    padding: 20px 0px;
+  }
 }
 
 #toc ol {
@@ -17,11 +24,21 @@
 }
 
 #toc ol li {
-  margin-top: 10px;
+  font-weight: 600;
+  margin: 15px;
 }
 
 #toc ol ol li {
-  padding-left: 10%;
+  font-weight: 400;
+  margin-left: 5%;
+}
+
+#toc ol ol li:before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f105";
+  margin-right: 10px;
+  color: #78a2a7;
 }
 
 #toc ol a {
@@ -64,16 +81,20 @@
 
 @media (max-width: 530px) {
   #toc .toc-title__contents {
-    font-size: 25px;
+    font-size: 28px;
   }
 }
 
 #toc .toc-oc {
   text-align: center;
-  color: #78a2a7;
+  color: white;
   margin-left: 10px;
   width: 60px;
+  padding: 4px;
+  border-radius: 5px;
   letter-spacing: 1.5px;
   cursor: pointer;
+  background-color: #78a2a7;
+  border-bottom: none;
 }
 /*# sourceMappingURL=toc.css.map */
