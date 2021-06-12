@@ -28,9 +28,9 @@
     <div class="sidebar" itemscope itemtype="https://schema.org/Person">
         <div class="profile" itemprop="author">
             <h3 class="sidebar-title" itemprop="name"><?php the_author_meta('nickname'); ?></h3>
-            <img class="profile-image" src="<?php echo get_avatar_url(wp_get_current_user()); ?>" alt="プロフィール画像" >
+            <img class="profile-image" src="<?php echo get_avatar_url(get_the_author_meta(2)); ?>" alt="プロフィール画像" >
             <div class="profile-text">
-            <p><?php the_author_meta('description'); ?></p>
+                <p><?php the_author_meta('description'); ?></p>
             </div>
         </div>
     </div>
