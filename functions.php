@@ -93,7 +93,12 @@ function add_posts_columns_excerpt_row($column_name, $post_id) {
   if ( 'summary' == $column_name ) {
     $excerpt = get_the_excerpt();
     $excerptLength = mb_strlen($excerpt, 'UTF-8');
-    echo ( $excerpt ) ? 'あり（'.$excerptLength.'文字）' : 'なし';
+    if ($excerptLength != 121) {
+      echo $excerptLength.'文字';
+    } else {
+      echo 'なし';
+    }
+    //echo ( $excerpt ) ? 'あり（'.$excerptLength.'文字）' : 'なし';
   }
 }
 
