@@ -7,11 +7,16 @@
         font-weight: bold;
     }
 
-    h3:before {
-        font-family: "Font Awesome 5 Free";
-        content: "\f105";
-        color: $lightGreen;
-        margin-right: 10px;
+    h2 {
+        border-bottom: 3px solid #78a2a7;
+    }
+
+    h3 {
+        &:before {
+            @include arrowIcon();
+            color: $lightGreen;
+            margin-right: 10px;
+        }
     }
 
     h3 {

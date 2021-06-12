@@ -7,17 +7,28 @@
     border-radius: 5px;
     padding: 30px 20px;
     background-color: $veryLightGreen;
+    border-top: 3px solid $lightGreen;
+
+    @include sm() {
+        padding: 20px 0px;
+    }
 
     ol { 
         @include removeUlButtons();
         margin-top: 10px;
 
         li {
-            margin-top: 10px;
+            font-weight: 600;
+            margin: 15px;
         }
 
         ol li {
-            padding-left: 10%;
+            font-weight: 400;
+            margin-left: 5%;
+            &:before {
+                @include arrowIcon();
+                color: $lightGreen;
+            }
         }
 
         a {
@@ -53,17 +64,21 @@
             font-size: 30px;
             letter-spacing: 3px;
             @include sm()  {
-                font-size: 25px;
+                font-size: 28px;
             }
         }
     }
 
     .toc-oc {
         text-align: center;
-        color: $lightGreen;
+        color: white;
         margin-left: 10px;
         width: 60px;
+        padding: 4px;
+        border-radius: 5px;
         letter-spacing: 1.5px;
         cursor: pointer;
+        background-color: $lightGreen;
+        border-bottom: none;
     }
 }
