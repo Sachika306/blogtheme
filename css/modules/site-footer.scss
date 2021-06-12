@@ -28,11 +28,13 @@ footer {
 
         .profile {
             text-align: center;
-    
-            &-image {
-                border-radius: 50%;
-                width: 110px;
 
+            &-image {
+                width: 110px;
+                margin: 0 auto;
+                &__content {
+                    border-radius: 50%;
+                }
             }
         }
     

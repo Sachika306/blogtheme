@@ -32,8 +32,12 @@ footer .footerMenu .profile {
 }
 
 footer .footerMenu .profile-image {
-  border-radius: 50%;
   width: 110px;
+  margin: 0 auto;
+}
+
+footer .footerMenu .profile-image__content {
+  border-radius: 50%;
 }
 
 footer .footerMenu p {
