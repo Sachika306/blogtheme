@@ -16,7 +16,7 @@ $lg: 960px;
 }
 
 @mixin lg {
-    @media (max-width: ($lg)) {
+    @media (min-width: ($md)) {
         @content;
     }
 }
