@@ -219,7 +219,7 @@ function themes_add_ctaBtn () {
  * 鉤括弧のショートコード 追加＆クイックタグAPIでエディタに表示
  */
 function dialogue( $attrs, $content = null ) {
-  return '<div class="dialogue"><p style="z-index: 100;">' . $content . '</p></div>';
+  return '<div class="dialogue"><p>' . $content . '</p></div>';
 }
 add_shortcode('dialogue', 'dialogue');
 

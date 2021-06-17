@@ -21,6 +21,12 @@ $lg: 960px;
     }
 }
 
+@mixin minlg {
+    @media (min-width: ($md)) {
+        @content;
+    }
+}
+
 @mixin removeUlButtons {
     list-style: none;
     padding-left: 0;
