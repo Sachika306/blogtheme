@@ -191,7 +191,7 @@ add_filter('the_content','toc_in');
 
 
 /*
- * ショートコード追加＆クイックタグAPIでエディタに表示
+ * ctaBtnのショートコード追加＆クイックタグAPIでエディタに表示
  */
 function ctaBtn( $atts, $content = null ) {
   extract( shortcode_atts( array(
@@ -203,7 +203,7 @@ function ctaBtn( $atts, $content = null ) {
 }
 add_shortcode('ctaBtn', 'ctaBtn');
 
-function themes_add_quicktags () {
+function themes_add_ctaBtn () {
   if ( wp_script_is( 'quicktags' ) ) {
   $html  = '<script>';
   $html .= 'QTags.addButton( "eg_paragraph", "ctaBtn", "[ctaBtn url=]", "[/ctaBtn]", "ctaBtn", "Paragraph tag", 1 );';
@@ -212,7 +212,27 @@ function themes_add_quicktags () {
   echo $html;
   }
  }
- add_action( 'admin_print_footer_scripts', 'themes_add_quicktags' );
+ add_action( 'admin_print_footer_scripts', 'themes_add_ctaBtn' );
+
+
+ /*
+ * 鉤括弧のショートコード 追加＆クイックタグAPIでエディタに表示
+ */
+function dialogue( $attrs, $content = null ) {
+  return '<div class="dialogue"><p style="z-index: 100;">' . $content . '</p></div>';
+}
+add_shortcode('dialogue', 'dialogue');
+
+function themes_add_dialogue () {
+  if ( wp_script_is( 'quicktags' ) ) {
+  $html  = '<script>';
+  $html .= 'QTags.addButton( "eg_paragraph", "dialogue", "[dialogue]", "[/dialogue]", "ctaBtn", "Paragraph tag", 1 );';
+  $html .= '</script>';
+  echo $html;
+  }
+ }
+ add_action( 'admin_print_footer_scripts', 'themes_add_dialogue' );
+
 
 /*
  * そのほか

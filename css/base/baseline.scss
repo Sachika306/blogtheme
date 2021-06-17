@@ -78,7 +78,7 @@
     border: dashed 2px lightgray; width: 100%;
   }
 
-
+  /* ショートコード */
   .ctaBtn {
     @include removeBtnDesign();
     // 中央よせ
@@ -101,6 +101,55 @@
     &:hover {
       opacity: 0.8;
     }
+  }
+
+  /* dialogue */
+
+  .dialogue {
+    text-align: center;
+    width: 100%;
+    margin: 36px auto 80px auto;
+    background-color: $veryLightGreen;
+    padding: 4px 20px;
+    border-radius: 5rem;
+    position: relative;
+
+    p {
+      position: relative;
+      z-index: 1;
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      z-index: 0;
+      width: 65px;
+      height: 65px; 
+      background-color: $veryLightGreen;
+      position: absolute;
+      top: -12px;
+      right: 40px;
+      border-radius: 50%;
+      box-shadow: 55px 40px 0 -2px $veryLightGreen;
+    }
+
+    &:before {
+      content: '';
+      width: 50px;
+      height: 50px; 
+      background-color: $veryLightGreen;
+      position: absolute;
+      bottom: -10%;
+      left: 20%;
+      border-radius: 50px;
+      box-shadow: 40px 30px 0 -10px $veryLightGreen;
+      @include lg() {
+      box-shadow: -100px -10px 0 4px $veryLightGreen, 
+                  40px 30px 0 -10px $veryLightGreen, 
+                  -120px -30px 0 4px $veryLightGreen;
+      }
+    }
+ 
   }
 
   // pにmargin36px指定しているので、blockquoteを使うと上の部分がうまく表示されないのを防ぐ
