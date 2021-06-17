@@ -16,6 +16,7 @@
 @import 'modules/toc.css';
 @import 'modules/topArticles.css';
 @import 'modules/pagination.css';
+@import 'modules/shortcode.css';
 
 /* singlepage modules */
 @import 'modules/single.css';
