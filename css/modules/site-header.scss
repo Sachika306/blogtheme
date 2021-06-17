@@ -16,7 +16,7 @@
         &__md {
             align-self: center;
             padding: 18px;
-            @include lg {
+            @include lg() {
                 display: none;
             }
         }
@@ -25,7 +25,7 @@
             display: none;
             margin: 18px;
             align-self: center;
-            @include lg {
+            @include lg() {
                 display: block;
             }
         }
