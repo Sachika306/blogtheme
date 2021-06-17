@@ -106,12 +106,13 @@
     z-index: 5;
     background-color: $darkGray;
     opacity: 0.9;
-    position: absolute;
+    position: fixed;
     right: -50%; // メニューバーを右に隠す
     height: 100%;
     width: 50%;
     transition: 0.4s;
     overflow: scroll;
+    display: block;
 
     &-search {
         margin: 10px;

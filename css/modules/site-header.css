@@ -145,13 +145,14 @@
   z-index: 5;
   background-color: #2e2e2e;
   opacity: 0.9;
-  position: absolute;
+  position: fixed;
   right: -50%;
   height: 100%;
   width: 50%;
   -webkit-transition: 0.4s;
   transition: 0.4s;
   overflow: scroll;
+  display: block;
 }
 
 .spnavMenu-search {
