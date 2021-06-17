@@ -142,10 +142,10 @@
 }
 
 .spnavMenu {
-  z-index: 1;
+  z-index: 5;
   background-color: #2e2e2e;
   opacity: 0.9;
-  position: fixed;
+  position: absolute;
   right: -50%;
   height: 100%;
   width: 50%;

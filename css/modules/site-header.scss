@@ -81,7 +81,6 @@
         top: 100%;
         padding-left: 0;
         display: none;
-        
 
         .menu-item {
             @include removeUlButtons();
@@ -104,10 +103,10 @@
 
 
 .spnavMenu {
-    z-index: 1;
+    z-index: 5;
     background-color: $darkGray;
     opacity: 0.9;
-    position: fixed;
+    position: absolute;
     right: -50%; // メニューバーを右に隠す
     height: 100%;
     width: 50%;
