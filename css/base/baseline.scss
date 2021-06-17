@@ -128,9 +128,9 @@
       background-color: $veryLightGreen;
       position: absolute;
       top: -12px;
-      right: 40px;
+      right: 30px;
       border-radius: 50%;
-      box-shadow: 55px 40px 0 -2px $veryLightGreen;
+      box-shadow: 40px 40px 0 -2px $veryLightGreen;
     }
 
     &:before {
@@ -140,13 +140,14 @@
       background-color: $veryLightGreen;
       position: absolute;
       bottom: -10%;
-      left: 20%;
+      left: 7%;
       border-radius: 50px;
-      box-shadow: 40px 30px 0 -10px $veryLightGreen;
+      box-shadow: 40px 30px 0 -15px $veryLightGreen; //　真ん中したの小さい丸
       @include lg() {
-      box-shadow: -100px -10px 0 4px $veryLightGreen, 
-                  40px 30px 0 -10px $veryLightGreen, 
-                  -120px -30px 0 4px $veryLightGreen;
+      box-shadow: 
+      -50px -40px 0 3px $veryLightGreen, // 左中の丸
+      -35px -10px 0 7px $veryLightGreen, // 左中の丸
+      40px 30px 0 -15px $veryLightGreen; //　真ん中したの小さい丸
       }
     }
  
