@@ -94,7 +94,7 @@ input[type="text"] {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 10px auto;
+  margin-bottom: 80px;
   color: white;
   font-weight: 700;
   letter-spacing: 1.5px;
@@ -103,6 +103,8 @@ input[type="text"] {
   padding: 13px 15px 12px 15px;
   border-radius: 15px;
   background-color: #208997;
+  -webkit-box-shadow: 0px 5px 0px 0px #1b7480;
+          box-shadow: 0px 5px 0px 0px #1b7480;
 }
 
 @media (max-width: 530px) {
@@ -159,7 +161,7 @@ input[type="text"] {
           box-shadow: 40px 30px 0 -15px #f2f7f8;
 }
 
-@media (min-width: 767px) {
+@media (max-width: 767px) {
   .dialogue:before {
     -webkit-box-shadow: -50px -40px 0 3px #f2f7f8, -35px -10px 0 7px #f2f7f8, 40px 30px 0 -15px #f2f7f8;
             box-shadow: -50px -40px 0 3px #f2f7f8, -35px -10px 0 7px #f2f7f8, 40px 30px 0 -15px #f2f7f8;
