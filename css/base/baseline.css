@@ -159,7 +159,7 @@ input[type="text"] {
           box-shadow: 40px 30px 0 -15px #f2f7f8;
 }
 
-@media (min-width: 767px) {
+@media (max-width: 767px) {
   .dialogue:before {
     -webkit-box-shadow: -50px -40px 0 3px #f2f7f8, -35px -10px 0 7px #f2f7f8, 40px 30px 0 -15px #f2f7f8;
             box-shadow: -50px -40px 0 3px #f2f7f8, -35px -10px 0 7px #f2f7f8, 40px 30px 0 -15px #f2f7f8;
