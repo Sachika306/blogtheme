@@ -43,14 +43,9 @@
       </div>
     </header>
 
-    
-
     <!-- スマホ用ナビゲーション -->
     <div class="spnavMenu">
       <?php get_template_part('/template-parts/categoryMenu');?>
-        <div class="spnavMenu-search">
-            <?php get_search_form(); ?>
-        </div>
     </div>
 
     <div class="search">
