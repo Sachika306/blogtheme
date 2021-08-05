@@ -153,15 +153,42 @@ function add_posts_columns_pv($columns) {
     $columns['pv'] = 'PV数'; 
     return $columns;
   }
-  function add_posts_columns_pv_row($column_name, $post_id) {
+function add_posts_columns_pv_row($column_name, $post_id) {
     if ( 'pv' == $column_name ) {
         echo get_post_meta(get_the_ID(), 'post_views_count')[0]; 
     }
-  }
+ }
   
-  add_filter( 'manage_posts_columns', 'add_posts_columns_pv' );
-  add_action( 'manage_posts_custom_column', 'add_posts_columns_pv_row', 10, 2 );
+add_filter( 'manage_posts_columns', 'add_posts_columns_pv' );
+add_action( 'manage_posts_custom_column', 'add_posts_columns_pv_row', 10, 2 );
 
+/*
+ * 管理画面の記事一覧に「KW」欄を表示
+ */
+function add_keyword($post_ID){
+  $post_ID['kw'] = 'KW';
+  return $post_ID;
+}
+function add_keyword_row($column_name, $post_ID) {
+  if ( 'kw' == $column_name ) {
+      echo get_post_meta(get_the_ID(), 'keyword')[0]; 
+  }
+}
+
+// 各投稿のカスタムフィールドに「is_checked = 0」をデフォルトで表示
+function set_kw($post_ID){
+  //　現在のフィールド値を取得
+  $current_field_value = esc_html(get_post_meta($post_ID,'kw', true));
+  //　フィールド値が未設定でリビジョンがない場合（新規投稿の場合）、「is_checked = 0」のカスタムフィールドを表示
+  if ($current_field_value == '' && !wp_is_post_revision($post_ID)){
+          add_post_meta($post_ID, 'kw', '未設定');
+  }
+  return $post_ID;
+}
+
+add_filter( 'manage_posts_columns', 'add_keyword' );
+add_action( 'manage_posts_custom_column', 'add_keyword_row', 10, 2 );
+add_action('wp_insert_post','set_kw');
 
 /*
  * WEBP対応
