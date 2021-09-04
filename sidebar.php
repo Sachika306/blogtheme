@@ -3,9 +3,9 @@
         <section class="topArticles">
             <h3 class="sidebar-title">人気の記事</h3>
             <?php
-            $i = 1;
+            $i = 1; // ランキングのカウント開始数値
             $query = new WP_query( array(
-                'posts_per_page' => 3,
+                'posts_per_page' => 5,
                 'meta_key' => 'post_views_count', // アクセス数ごとに並び替える
                 'orderby'   => 'meta_value_num' // アクセス数ごとに並び替える
             ));
