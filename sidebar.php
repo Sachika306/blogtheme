@@ -37,7 +37,7 @@
         </div>
     </section>
 
-    <section class="sidebar">
+    <!-- <section class="sidebar">
             <div>
                 <h3 class="sidebar-title">独学でエンジニア転職</h3>
                 <span>独学でエンジニアに転職するためのロードマップです。</span>
@@ -74,6 +74,6 @@
                     </div>
                 </div>
             </div>
-    </section>
+    </section> -->
 
 </aside>
