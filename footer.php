@@ -30,7 +30,7 @@
               <div itemscope itemtype="https://schema.org/Person">
                 <h3 class="footerMenu-title">筆者プロフィール</h3>
                 <div class="profile-image">
-                  <img class="profile-image__content" src="https://selftaught056.com/wp-content/uploads/2021/09/profile-e1630754535803.jpg" alt="プロフィール画像" >
+                  <img class="profile-image__content" src="https://selftaught056.com/wp-content/uploads/2021/09/profile_0904082746.png" alt="プロフィール画像" >
                 </div>
                 <p class="profile-text"><?php the_author_meta('description'); ?></p>
               </div>
