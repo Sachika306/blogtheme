@@ -11,20 +11,76 @@
         text-align: center;
         font-weight: bold;
         letter-spacing: 1.7px;
-        margin-bottom: 50px;
+        margin-bottom: 40px;
+        font-size: 22px;
+        &::after {
+            content: "";
+            display: block;
+            width: 80%;
+            height: 3px;
+            margin: 0 auto;
+            background-color: $lightGreen;
+        }
+    }
+
+    .loadmap {
+        h4 {
+            color: white;
+            background-color: $lightGreen;
+            border-radius: 5px;
+            padding: 0px 10px;
+        }
+        
+        .list {
+            border-left: solid 4px $lightGreen;
+            margin-left: 20px;
+            
+            ol  {
+                counter-reset: li; 
+                /* デフォルトのスタイルをなくす */
+                list-style: none;
+
+                li {
+                    position: relative;
+                    display: block;
+                    margin: 20px 0;
+                    text-decoration: none;
+                }
+                
+                li:before {
+                    margin-left: -35px;
+                    content: counter(li);
+                    counter-increment: li;
+                    position: absolute;
+                    left: -1.3em;
+                    top: 60%;
+                    margin-top: -1.1em;
+                    background: $lightGreen;
+                    height: 30px;
+                    width: 30px;
+                    line-height: 1.5em; //カウント文字の真ん中寄せ
+                    color: white;
+                    border: 2px solid #fff;
+                    text-align: center;
+                    font-weight: bold;
+                    border-radius: 2em;
+                }
+            }
+        }
+
+
     }
 
     .profile {
         text-align: center;
-
         &-image {
             border-radius: 50%;
             width: 110px;
         }
     }
 
-    p {
-        font-size: 15px;
+    p, li {
+        font-size: 16px;
     }
     
 }
