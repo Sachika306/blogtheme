@@ -169,9 +169,14 @@ function add_keyword($post_ID){
   $post_ID['kw'] = 'KW';
   return $post_ID;
 }
+
 function add_keyword_row($column_name, $post_ID) {
   if ( 'kw' == $column_name ) {
       echo get_post_meta(get_the_ID(), 'kw')[0]; 
+      echo '(';
+      echo get_post_meta(get_the_ID(), 'search')[0];
+      echo get_post_meta(get_the_ID(), 'difficulty')[0];
+      echo ')'; 
   }
 }
 
@@ -179,9 +184,12 @@ function add_keyword_row($column_name, $post_ID) {
 function set_kw($post_ID){
   //　現在のフィールド値を取得
   $current_field_value = esc_html(get_post_meta($post_ID,'kw', true));
-  //　フィールド値が未設定でリビジョンがない場合（新規投稿の場合）、「is_checked = 0」のカスタムフィールドを表示
+  $current_field_value = esc_html(get_post_meta($post_ID,'search', true));
+  //　フィールド値が未設定でリビジョンがない場合（新規投稿の場合）、下記のカスタムフィールドを表示
   if ($current_field_value == '' && !wp_is_post_revision($post_ID)){
           add_post_meta($post_ID, 'kw', '未設定');
+          add_post_meta($post_ID, 'search', '未設定');
+          add_post_meta($post_ID, 'search_difficulty', '未設定');
   }
   return $post_ID;
 }
