@@ -165,48 +165,52 @@ function toc_in($the_content) {
 add_filter('the_content','toc_in');
 
 
-/*
- * ctaBtnのショートコード追加＆クイックタグAPIでエディタに表示
+ /*
+ * ショートコード追加
  */
-function ctaBtn( $atts, $content = null ) {
+// ctaBtn
+function ctaBtn($atts, $content=null) {
   extract( shortcode_atts( array(
-      'url' => '',
-      'quote' => "'",
+    'url' => '',
+    'quote' => "'",
   ), $atts ) );
-   
-  return '<button onclick="window.open('.$quote.$url.$quote.','.$quote.'blank'.$quote.')" class="ctaBtn">' . $content . '</button>';
+  switch($atts['type']):
+    case "geekly": return '<button onclick="window.open('.$quote.'https://www.geekly.co.jp/'.$quote.','.$quote.'blank'.$quote.')" class="ctaBtn">' . $content . '</button>'; break;
+    case "リクナビNEXT": return '<button onclick="window.open('.$quote.'https://ad.presco.asia/cl/?b_id=0ASeHaOw&t_id=1'.$quote.','.$quote.'blank'.$quote.')" class="ctaBtn">リクナビNEXTに無料登録</button>'; break;
+    case "techStarsAgent": return '<button onclick="window.open('.$quote.'https://ad.presco.asia/cl/?b_id=AM5OYule&t_id=1'.$quote.','.$quote.'blank'.$quote.')" class="ctaBtn">TechStarsAgentに無料登録</button>'; break;
+    case "jac": return '<button onclick="window.open('.$quote.'https://ad.presco.asia/cl/?b_id=Nol0BwAq&t_id=1'.$quote.','.$quote.'blank'.$quote.')" class="ctaBtn">JACリクルートメントに無料登録</button>'; break;
+    case "geekJob": return '<button onclick="window.open('.$quote.'https://ad.presco.asia/cl/?b_id=ehIjLY04&t_id=1'.$quote.','.$quote.'blank'.$quote.')" class="ctaBtn">GEEK JOBに無料登録</button>'; break;
+    case "リクルートエージェント": return '<button onclick="window.open('.$quote.'https://ad.presco.asia/cl/?b_id=zQZn5Fuo&t_id=1'.$quote.','.$quote.'blank'.$quote.')" class="ctaBtn">リクルートエージェントに無料登録</button>'; break;
+    case "イードア": return '<button onclick="window.open('.$quote.'https://ad.presco.asia/cl/?b_id=BzWbTDkU&t_id=1'.$quote.','.$quote.'blank'.$quote.')" class="ctaBtn">イードアに無料登録</button>'; break;  
+    default: return '<button onclick="window.open('.$quote.$url.$quote.','.$quote.'blank'.$quote.')" class="ctaBtn">' . $content . '</button>'; 
+  endswitch;
 }
 add_shortcode('ctaBtn', 'ctaBtn');
 
-function themes_add_ctaBtn () {
-  if ( wp_script_is( 'quicktags' ) ) {
-  $html  = '<script>';
-  $html .= 'QTags.addButton( "ctaBtn", "ctaBtn", "[ctaBtn url=]", "[/ctaBtn]", "ctaBtn", "Paragraph tag", 1 );';
-  $html .= '</script>';
-  
-  echo $html;
-  }
- }
- add_action( 'admin_print_footer_scripts', 'themes_add_ctaBtn' );
-
- /*
- * 鉤括弧のショートコード 追加＆クイックタグAPIでエディタに表示
- */
+// dialogue
 function dialogue( $attrs, $content = null ) {
   return '<div class="dialogue"><p>' . $content . '</p></div>';
 }
 add_shortcode('dialogue', 'dialogue');
 
-function themes_add_dialogue () {
+
+// クイックタグAPIでエディタに表示
+function themes_add_presco () {
+  // ctaBtn
+  $html  = '<script>';
+  $html .= 'QTags.addButton( "ctaBtn", "ctaBtn", "[ctaBtn url= type=]", "[/ctaBtn]", "ctaBtn", "Paragraph tag", 1 );';
+  $html .= '</script>';
+  echo $html;
+
+  // dialogue
   if ( wp_script_is( 'quicktags' ) ) {
   $html  = '<script>';
   $html .= 'QTags.addButton( "dialogue", "dialogue", "[dialogue]", "[/dialogue]", "dialogue", "Paragraph tag", 2);';
   $html .= '</script>';
   echo $html;
   }
- }
- add_action( 'admin_print_footer_scripts', 'themes_add_dialogue' );
-
+}
+ add_action( 'admin_print_footer_scripts', 'themes_add_presco' );
 
 /*
  * そのほか
