@@ -171,7 +171,7 @@ function add_keyword($post_ID){
 }
 function add_keyword_row($column_name, $post_ID) {
   if ( 'kw' == $column_name ) {
-      echo get_post_meta(get_the_ID(), 'keyword')[0]; 
+      echo get_post_meta(get_the_ID(), 'kw')[0]; 
   }
 }
 
