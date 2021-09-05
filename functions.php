@@ -42,7 +42,7 @@ function is_bot() {
     }
     return false;
   }
-  
+ 
 
 /*
  * ナビゲーションメニューの設定
@@ -76,6 +76,7 @@ function add_customfields($post_ID){
   return $post_ID;
 }
 add_filter( 'manage_posts_columns', 'add_customfields' );
+
 
 function add_columns($column_name, $post_ID) {
   // サムネイル
@@ -180,14 +181,13 @@ add_shortcode('ctaBtn', 'ctaBtn');
 function themes_add_ctaBtn () {
   if ( wp_script_is( 'quicktags' ) ) {
   $html  = '<script>';
-  $html .= 'QTags.addButton( "eg_paragraph", "ctaBtn", "[ctaBtn url=]", "[/ctaBtn]", "ctaBtn", "Paragraph tag", 1 );';
+  $html .= 'QTags.addButton( "ctaBtn", "ctaBtn", "[ctaBtn url=]", "[/ctaBtn]", "ctaBtn", "Paragraph tag", 1 );';
   $html .= '</script>';
   
   echo $html;
   }
  }
  add_action( 'admin_print_footer_scripts', 'themes_add_ctaBtn' );
-
 
  /*
  * 鉤括弧のショートコード 追加＆クイックタグAPIでエディタに表示
@@ -200,7 +200,7 @@ add_shortcode('dialogue', 'dialogue');
 function themes_add_dialogue () {
   if ( wp_script_is( 'quicktags' ) ) {
   $html  = '<script>';
-  $html .= 'QTags.addButton( "eg_paragraph", "dialogue", "[dialogue]", "[/dialogue]", "ctaBtn", "Paragraph tag", 1 );';
+  $html .= 'QTags.addButton( "dialogue", "dialogue", "[dialogue]", "[/dialogue]", "dialogue", "Paragraph tag", 2);';
   $html .= '</script>';
   echo $html;
   }
@@ -213,3 +213,4 @@ function themes_add_dialogue () {
  */
 remove_filter('pre_user_description', 'wp_filter_kses'); //プロフィールの自己紹介欄でHTMLを適用できるようにする
 add_theme_support('post-thumbnails'); // Thumbnailを使えるようにする
+
