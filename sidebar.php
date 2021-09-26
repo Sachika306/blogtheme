@@ -37,6 +37,18 @@
         </div>
     </section>
 
+    <!-- Googleアドセンス　関連記事広告 -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2989783924936646" crossorigin="anonymous"></script>
+    <ins class="adsbygoogle"
+        style="display:block"
+        data-ad-format="autorelaxed"
+        data-ad-client="ca-pub-2989783924936646"
+        data-ad-slot="3339975712">
+    </ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+
     <!-- <section class="sidebar">
             <div>
                 <h3 class="sidebar-title">独学でエンジニア転職</h3>
