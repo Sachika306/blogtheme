@@ -214,38 +214,6 @@ function themes_add_presco () {
 
 
  //記事内にアドセンス広告を表示させるコード
-function add_adsense_before_h2($the_content) {
- 
-  $ad = <<< EOF
-   
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2989783924936646"
-     crossorigin="anonymous"></script>
-    <ins class="adsbygoogle"
-        style="display:block"
-        data-ad-format="autorelaxed"
-        data-ad-client="ca-pub-2989783924936646"
-        data-ad-slot="3339975712">
-    </ins>
-  <script>
-      (adsbygoogle = window.adsbygoogle || []).push({});
-  </script>
-   
-  EOF;
-   
-  if ( is_single() ) {
-   $h2 = '/^<h2.*?>.+?<\/h2>$/im';
-    if ( preg_match_all( $h2, $the_content, $h2s )) {
-        if ( $h2s[0] ) {
-          if ( $h2s[0][0] ) {
-          $the_content = str_replace($h2s[0][0], $ad.$h2s[0][0], $the_content);
-          }
-        }
-    }
-   }
-   return $the_content;
-  }
-  add_filter('the_content','add_adsense_before_h2');
-  
 
 /*
  * そのほか
