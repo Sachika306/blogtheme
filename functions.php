@@ -63,6 +63,24 @@ class custom_walker_nav_menu extends Walker_Nav_Menu { // CustomWalker設定
     }
 }
 
+/*
+ * 管理画面に設定画面を追加
+ */
+add_action('admin_menu', 'my_theme_option');
+function my_theme_option() {
+  add_options_page( 'テーマ設定', 'テーマ設定', 'edit_themes','theme_option','theme_option_file' );
+}
+
+function theme_option_file(){
+  require_once ( get_template_directory() . '/theme-options.php' );
+}
+
+add_action('admin_init', 'my_theme_option_setting' );
+function my_theme_option_setting() {
+    register_setting( 'myoption-group', 'logoImg' );
+    register_setting( 'myoption-group', 'profileImg' );
+    register_setting( 'myoption-group', 'googleTagManager' );
+}
 
 /*
  * 管理画面の記事一覧に「KW」欄を表示

@@ -47,11 +47,6 @@
             ?>
 
             <article class="related-box" itemscope itemtype="https://schema.org/BlogPosting">
-              <div itemscope itemtype="https://schema.org/ImageObject" class="related-thumbnail">
-                <a href="<?php the_permalink(); ?>" itemprop="url">
-                  <?php get_template_part('template-parts/thumbnail'); ?>
-                </a>
-              </div>
               <a href="<?php the_permalink(); ?>" itemprop="mainEntityOfPage">
                 <h4 class="" itemprop="headline"><?php the_title(); ?></h4>
               </a>

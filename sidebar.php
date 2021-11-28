@@ -30,24 +30,12 @@
     <section class="sidebar" itemscope itemtype="https://schema.org/Person">
         <div class="profile" itemprop="author">
             <h3 class="sidebar-title" itemprop="name"><?php the_author_meta('nickname'); ?></h3>
-            <img class="profile-image" src="https://selftaught056.com/wp-content/uploads/2021/09/profile_0904082746.png" alt="プロフィール画像" >
+            <img class="profile-image" src="<?php echo get_option('profileImg'); ?>" alt="プロフィール画像" >
             <div class="profile-text">
                 <p><?php the_author_meta('description'); ?></p>
             </div>
         </div>
     </section>
-
-    <!-- Googleアドセンス　関連記事広告 -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2989783924936646" crossorigin="anonymous"></script>
-    <ins class="adsbygoogle"
-        style="display:block"
-        data-ad-format="autorelaxed"
-        data-ad-client="ca-pub-2989783924936646"
-        data-ad-slot="3339975712">
-    </ins>
-    <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
 
     <!-- <section class="sidebar">
             <div>
