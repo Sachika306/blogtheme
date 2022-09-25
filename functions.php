@@ -82,6 +82,10 @@ function my_theme_option_setting() {
     register_setting( 'myoption-group', 'googleTagManager' );
 }
 
+// オリジナルパーツ読み込み
+get_template_part( 'include/custom' );
+add_action('customize_register', 'sidebar_panel');
+
 /*
  * 管理画面の記事一覧に「KW」欄を表示
  */

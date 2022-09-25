@@ -30,9 +30,15 @@
   <header class="header">
       <!-- ヘッダーナビゲーション -->
       <div class="header-nav">
+
+        <!-- ヘッダー左のブログ名-->
         <div class="header-titlewrapper" itemscope itemtype="https://schema.org/Organization">
           <a href="<?php echo home_url(); ?>" itemprop="url">
-            <h1 class="header-title" itemprop="publisher"><?php echo get_bloginfo('name'); ?></h1>
+            <h1 class="header-title" itemprop="publisher">
+              <?php if (get_theme_mod('header_logo_control')) {
+                  echo get_theme_mod('header_logo_control'); 
+                } ?>
+            </h1>
           </a>
         </div>
         <?php get_template_part('/template-parts/categoryMenu');?>
