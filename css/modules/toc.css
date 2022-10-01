@@ -10,80 +10,62 @@
   background-color: #f2f7f8;
   border-top: 3px solid #78a2a7;
 }
-
 @media (max-width: 530px) {
   #toc {
     padding: 20px 0px;
   }
 }
-
 #toc ol {
   list-style: none;
   padding-left: 0;
   margin-top: 10px;
 }
-
 #toc ol li {
   font-weight: 600;
   margin: 15px;
 }
-
 #toc ol ol li {
   font-weight: 400;
   margin-left: 5%;
 }
-
 #toc ol ol li:before {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   content: "\f105";
   color: #78a2a7;
 }
-
 #toc ol a {
   border-bottom: none;
 }
-
 #toc ol a:hover {
   opacity: 0.8;
 }
-
 @media (max-width: 530px) {
   #toc ol a {
     font-size: 16px;
   }
 }
-
 #toc .toc-list__close {
   display: none;
 }
-
 #toc .toc-list__open {
   display: block;
 }
-
 #toc .toc-title {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   color: #78a2a7;
   margin-bottom: 20px;
 }
-
 #toc .toc-title__contents {
   font-size: 30px;
   letter-spacing: 3px;
 }
-
 @media (max-width: 530px) {
   #toc .toc-title__contents {
     font-size: 28px;
   }
 }
-
 #toc .toc-oc {
   text-align: center;
   color: white;
@@ -95,5 +77,4 @@
   cursor: pointer;
   background-color: #78a2a7;
   border-bottom: none;
-}
-/*# sourceMappingURL=toc.css.map */
+}/*# sourceMappingURL=toc.css.map */

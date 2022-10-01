@@ -43,10 +43,11 @@
   
   p {
     margin: 36px 0;
+    font-size: 18px;
   }
 
   p, li {
-    font-size: 18px;
+    display: none;
   }
 
   p, h1, h2, h3, h4, h5, h6 {

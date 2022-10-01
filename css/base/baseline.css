@@ -3,9 +3,9 @@
 /* ボタン */
 /* responsive */
 body {
-  background-color: #ebebeb;
+  background-color: hsl(0deg, 0%, 92%);
   color: #7b7b7b;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   overflow-x: hidden;
   position: relative;
 }
@@ -36,17 +36,17 @@ a:hover, a:focus {
   text-decoration: none;
   color: #7b7b7b;
 }
-
 a:hover p, a:hover h1, a:hover h2, a:hover h3, a:hover h4, a:hover h5, a:hover h6, a:hover span, a:focus p, a:focus h1, a:focus h2, a:focus h3, a:focus h4, a:focus h5, a:focus h6, a:focus span {
   opacity: 0.8;
 }
 
 p {
   margin: 36px 0;
+  font-size: 18px;
 }
 
 p, li {
-  font-size: 18px;
+  display: none;
 }
 
 p, h1, h2, h3, h4, h5, h6 {
@@ -60,14 +60,13 @@ h2 {
 main {
   padding-top: 40px;
 }
-
 @media (max-width: 530px) {
   main .container {
     padding: 0;
   }
 }
 
-input[type="text"] {
+input[type=text] {
   padding: 10px;
   height: 50px;
 }
@@ -88,12 +87,8 @@ input[type="text"] {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   margin-bottom: 80px;
   color: white;
   font-weight: 700;
@@ -103,16 +98,13 @@ input[type="text"] {
   padding: 13px 15px 12px 15px;
   border-radius: 15px;
   background-color: #208997;
-  -webkit-box-shadow: 0px 5px 0px 0px #1b7480;
-          box-shadow: 0px 5px 0px 0px #1b7480;
+  box-shadow: 0px 5px 0px 0px #1b7480;
 }
-
 @media (max-width: 530px) {
   .ctaBtn {
     font-size: 15px;
   }
 }
-
 .ctaBtn:hover {
   opacity: 0.8;
 }
@@ -127,14 +119,12 @@ input[type="text"] {
   border-radius: 5rem;
   position: relative;
 }
-
 .dialogue p {
   position: relative;
   z-index: 1;
 }
-
 .dialogue:after {
-  content: '';
+  content: "";
   display: block;
   z-index: 0;
   width: 65px;
@@ -144,12 +134,10 @@ input[type="text"] {
   top: -12px;
   right: 30px;
   border-radius: 50%;
-  -webkit-box-shadow: 40px 40px 0 -2px #f2f7f8;
-          box-shadow: 40px 40px 0 -2px #f2f7f8;
+  box-shadow: 40px 40px 0 -2px #f2f7f8;
 }
-
 .dialogue:before {
-  content: '';
+  content: "";
   width: 50px;
   height: 50px;
   background-color: #f2f7f8;
@@ -157,14 +145,11 @@ input[type="text"] {
   bottom: -10%;
   left: 7%;
   border-radius: 50px;
-  -webkit-box-shadow: 40px 30px 0 -15px #f2f7f8;
-          box-shadow: 40px 30px 0 -15px #f2f7f8;
+  box-shadow: 40px 30px 0 -15px #f2f7f8;
 }
-
 @media (max-width: 767px) {
   .dialogue:before {
-    -webkit-box-shadow: -50px -40px 0 3px #f2f7f8, -35px -10px 0 7px #f2f7f8, 40px 30px 0 -15px #f2f7f8;
-            box-shadow: -50px -40px 0 3px #f2f7f8, -35px -10px 0 7px #f2f7f8, 40px 30px 0 -15px #f2f7f8;
+    box-shadow: -50px -40px 0 3px #f2f7f8, -35px -10px 0 7px #f2f7f8, 40px 30px 0 -15px #f2f7f8;
   }
 }
 
@@ -174,5 +159,4 @@ blockquote p {
 
 .wp-embedded-content {
   width: 100%;
-}
-/*# sourceMappingURL=baseline.css.map */
+}/*# sourceMappingURL=baseline.css.map */
