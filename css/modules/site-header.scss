@@ -57,6 +57,7 @@
         display: flex;
         margin-bottom: 0px;
         align-self: center;
+        list-style: none;
         
         @include sm {
             width: 0%;
