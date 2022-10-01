@@ -42,7 +42,7 @@
     // ブログタイトルのフォントデザイン
     &-title {
         margin: 0; //リセットCSSに入っている margin-top, margin-bottom の指定を0に
-        font-family: cursive; 
+        font-family: cursive, serif; 
         @include md {
             font-size: 18px;
         }
