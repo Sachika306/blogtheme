@@ -41,7 +41,7 @@
 }
 .header-title {
   margin: 0;
-  font-family: cursive;
+  font-family: cursive, serif;
   font-size: 28px;
   color: white;
   text-decoration: none;
