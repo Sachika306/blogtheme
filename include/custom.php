@@ -126,15 +126,25 @@ function sidebar_panel($wp_customize)
     $wp_customize->add_setting('show_profile_control',  array(
         'default' => 'child_none',
      ));
-     $wp_customize->add_control( 'show_profile_control', array(
+     $wp_customize->add_control('show_profile_control', array(
         'settings' => 'show_profile_control',
         'label' =>'プロフィールの表示',
         'section' => 'profile',
         'type' => 'checkbox'
     ));
+
+    $wp_customize->add_setting('profile_name_control');
+    $wp_customize->add_control('profile_name_control', array(
+            'settings' => 'profile_name_control',
+            'label' =>'プロフィール名',
+            'panel' => 'sidebar',
+            'section' => 'profile',
+            'type' => 'text'
+        )
+    );
      
     $wp_customize->add_setting('profile_image_control');
-    $wp_customize->add_control( new WP_Customize_Image_Control(
+    $wp_customize->add_control(new WP_Customize_Image_Control(
         $wp_customize, 'profile_image_control', 
         array(
             'settings' => 'profile_image_control',
@@ -155,7 +165,7 @@ function sidebar_panel($wp_customize)
         )
     );
 
-    $wp_customize->add_setting('show_footer_left_control',  array('default' => true));
+    $wp_customize->add_setting('show_footer_left_control',  array('default' => false));
     $wp_customize->add_control('show_footer_left_control',
         array(
             'settings' => 'show_footer_left_control',
@@ -166,7 +176,7 @@ function sidebar_panel($wp_customize)
         )
     );
 
-    $wp_customize->add_setting('show_footer_center_control',  array('default' => true));
+    $wp_customize->add_setting('show_footer_center_control',  array('default' => false));
     $wp_customize->add_control('show_footer_center_control',
         array(
             'settings' => 'show_footer_center_control',
@@ -177,7 +187,7 @@ function sidebar_panel($wp_customize)
         )
     );
 
-    $wp_customize->add_setting('show_footer_right_control', array('default' => true));
+    $wp_customize->add_setting('show_footer_right_control', array('default' => false));
     $wp_customize->add_control('show_footer_right_control',
         array(
             'settings' => 'show_footer_right_control',
@@ -218,5 +228,49 @@ function sidebar_panel($wp_customize)
             'description' => 'https://publish.twitter.com/こちらで作ったものを挿入'
         )
     );
+
+    // カラー設定
+    // カラー設定パネル
+    $wp_customize->add_panel(
+        'color_panel',
+        array(
+            'title' => 'カラー設定',
+            'priority' => 10,
+        )
+    );
+
+    // カラー設定セクション
+    $wp_customize->add_section('color_setting', array(
+        'title' => 'カラー設定',
+        'priority' => 10,
+        'panel' => 'color_panel',
+        )
+    );
+
+    // カラー設定コントロール
+    $wp_customize->add_setting('header_color_control',  array(
+        'default' => '333333',
+     ));
+     $wp_customize->add_control(new WP_Customize_Color_Control( 
+        $wp_customize, 'header_color_control',
+        array(
+            'settings' => 'header_color_control',
+            'label' =>'ヘッダーの色',
+            'section' => 'color_setting',
+        )
+    ));
+
+    // アクセントカラー
+    $wp_customize->add_setting('accent_color_control',  array(
+        'default' => '208997',
+        ));
+        $wp_customize->add_control(new WP_Customize_Color_Control( 
+        $wp_customize, 'accent_color_control',
+        array(
+            'settings' => 'accent_color_control',
+            'label' =>'アクセントの色',
+            'section' => 'color_setting',
+        )
+    ));
 }
 ?>

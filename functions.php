@@ -12,6 +12,39 @@ add_action('wp_enqueue_scripts', 'add_css_js'); //CSSとJSの読み込み
 
 
 /*
+ * カスタマイザーで設定した色を反映
+ */
+function customizer_option_css(){
+  $headerColor = get_theme_mod('header_color_control');
+  $accentColor = get_theme_mod('accent_color_control');
+  if(!empty($headerColor) && !empty($accentColor)):
+  ?>
+  <style type="text/css" id="customizer_option_css">
+    .header{
+      background:<?php echo $headerColor; ?>;
+    }
+
+    .article-readmore a {
+      color: <?php echo $accentColor; ?>;
+    }
+
+    .pagination-next a {
+      background-color: <?php echo $accentColor; ?>;
+    }
+
+    .sidebar-title::after, footer .footerMenu-title:after {
+      background-color: <?php echo $accentColor; ?>;
+    }
+  </style>
+  <?php
+  endif;	
+}
+add_action('wp_head', 'customizer_option_css' );
+
+
+
+
+/*
 * アクセス数の集計
 */
 function set_post_views($postID) { 
@@ -240,6 +273,5 @@ function themes_add_presco () {
 /*
  * そのほか
  */
-remove_filter('pre_user_description', 'wp_filter_kses'); //プロフィールの自己紹介欄でHTMLを適用できるようにする
+remove_filter('pre_user_description', 'wp_filter_kses'); //プロフィールの自己紹介欄でHTMLを適用できるようにする
 add_theme_support('post-thumbnails'); // Thumbnailを使えるようにする
-
