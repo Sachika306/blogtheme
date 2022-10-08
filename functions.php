@@ -17,7 +17,8 @@ add_action('wp_enqueue_scripts', 'add_css_js'); //CSSとJSの読み込み
 function customizer_option_css(){
   $headerColor = get_theme_mod('header_color_control');
   $accentColor = get_theme_mod('accent_color_control');
-  if(!empty($headerColor) && !empty($accentColor)):
+  $lightAccentColor = get_theme_mod('light_accent_color_control');
+  if(!empty($headerColor) && !empty($accentColor) && !empty($lightAccentColor)):
   ?>
   <style type="text/css" id="customizer_option_css">
     .header{
@@ -34,6 +35,28 @@ function customizer_option_css(){
 
     .sidebar-title::after, footer .footerMenu-title:after {
       background-color: <?php echo $accentColor; ?>;
+    }
+
+    /* 目次 */
+    #toc {
+      border-top: <?php echo '3px solid ' . $accentColor; ?>;
+    }
+
+    #toc {
+      background-color: <?php echo $lightAccentColor; ?>;
+    }
+
+    #toc .toc-title {
+      color: <?php echo $accentColor; ?>;
+    }
+
+    #toc .toc-oc {
+      background-color: <?php echo $accentColor; ?>;
+    }
+
+    /* 固定ページ */
+    .single h2 {
+      border-bottom: <?php echo '3px solid ' . $accentColor; ?>;
     }
   </style>
   <?php
