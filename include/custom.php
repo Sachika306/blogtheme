@@ -260,7 +260,7 @@ function sidebar_panel($wp_customize)
         )
     ));
 
-    // アクセントカラー
+    // アクセントカラー（濃）
     $wp_customize->add_setting('accent_color_control',  array(
         'default' => '208997',
         ));
@@ -268,8 +268,23 @@ function sidebar_panel($wp_customize)
         $wp_customize, 'accent_color_control',
         array(
             'settings' => 'accent_color_control',
-            'label' =>'アクセントの色',
+            'label' =>'アクセントの色（濃）',
             'section' => 'color_setting',
+            'description' => 'サイドバーや、個別記事のh2見出しの下、目次などに利用されます'
+        )
+    ));
+
+    // アクセントカラー（薄）
+    $wp_customize->add_setting('light_accent_color_control',  array(
+        'default' => 'F2F7F8',
+        ));
+        $wp_customize->add_control(new WP_Customize_Color_Control( 
+        $wp_customize, 'light_accent_color_control',
+        array(
+            'settings' => 'light_accent_color_control',
+            'label' =>'アクセントの色（薄）',
+            'section' => 'color_setting',
+            'description' => '目次の後ろの背景などに利用されます'
         )
     ));
 }
