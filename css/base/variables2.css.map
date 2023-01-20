@@ -1,9 +1,1 @@
-{
-    "version": 3,
-    "mappings": ";AAUA,qBAAqB;AAKrB,YAAY",
-    "sources": [
-        "variables2.scss"
-    ],
-    "names": [],
-    "file": "variables2.css"
-}
+{"version":3,"sources":["variables2.css","variables2.scss"],"names":[],"mappings":"AAAA,gBAAgB;ACUhB,eAAA;AAKA,QAAA","file":"variables2.css"}
