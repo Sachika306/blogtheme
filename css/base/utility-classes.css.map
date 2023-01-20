@@ -1,9 +1,1 @@
-{
-    "version": 3,
-    "mappings": "AAAA,gBAAgB",
-    "sources": [
-        "utility-classes.scss"
-    ],
-    "names": [],
-    "file": "utility-classes.css"
-}
+{"version":3,"sources":["utility-classes.scss"],"names":[],"mappings":"AAAA,eAAA","file":"utility-classes.css"}

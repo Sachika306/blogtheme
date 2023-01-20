@@ -5,25 +5,18 @@
 .share {
   margin: 20px auto;
 }
-
 .share ul {
   list-style: none;
   padding-left: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  justify-content: flex-end;
   margin-bottom: -18px;
 }
-
 .share ul li {
   text-align: right;
   width: 80px;
   margin: 0 0 0 10px;
 }
-
 .share ul li i {
   color: white;
   padding: 7px 0px;
@@ -31,23 +24,18 @@
   border-radius: 2px;
   display: block;
 }
-
 .share ul li .fa-facebook-f {
   background-color: #4582d1;
 }
-
 .share ul li .fa-twitter {
   background-color: #35a7b6;
 }
-
 .share ul li .fa-hatena {
   background-color: #417ae4;
   /* fontawesomeにないはてぶアイコン追加 */
 }
-
 .share ul li .fa-hatena:before {
   content: "B!";
   font-family: Verdana;
   font-weight: bold;
-}
-/*# sourceMappingURL=share.css.map */
+}/*# sourceMappingURL=share.css.map */

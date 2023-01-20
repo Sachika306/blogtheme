@@ -5,17 +5,15 @@
 .single {
   margin: 0 auto;
   padding-bottom: 80px;
+  overflow-wrap: break-word;
 }
-
 .single h2, .single h3, .single h4, .single h5, .single h6 {
   margin: 50px 0px -18px;
   font-weight: bold;
 }
-
 .single h2 {
   border-bottom: 3px solid #78a2a7;
 }
-
 .single h3:before {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
@@ -23,88 +21,74 @@
   color: #78a2a7;
   margin-right: 10px;
 }
-
 .single h3 {
   font-size: 20px;
 }
-
 .single ul li,
 .single ol li {
   margin: 20px;
 }
-
 @media (max-width: 530px) {
   .single ul li,
-  .single ol li {
+.single ol li {
     font-size: 15px;
   }
 }
-
+.single iframe {
+  max-width: 100%;
+}
 @media (max-width: 530px) {
   .single p {
     font-size: 15px;
   }
 }
-
 .single-content a {
   margin: auto 5px;
   border-bottom: 1px dashed;
 }
-
 .single-item {
   border-radius: 5px;
   background-color: white;
   padding: 30px 70px 10px 70px;
 }
-
 @media (max-width: 530px) {
   .single-item {
     padding: 30px 20px 30px 20px;
   }
 }
-
 .single-title {
   font-weight: bold;
   font-size: 25px;
 }
-
 .single-title a {
   color: #7b7b7b;
   font-weight: 600;
 }
-
 .single-title a:hover {
   opacity: 0.8;
 }
-
 @media (max-width: 530px) {
   .single-title {
     line-height: 1.3;
   }
 }
-
 .single-thumbnail {
   margin: 20px auto;
 }
-
 .single-thumbnail img {
   width: 100%;
   height: auto;
   -o-object-fit: cover;
      object-fit: cover;
 }
-
 .single-metabox {
   color: #7b7b7b;
   margin-bottom: 10px;
 }
-
 .single-metabox p {
   margin: 0px;
 }
-
 .single-metabox__date {
   font-size: 14px;
   letter-spacing: 0px;
-}
-/*# sourceMappingURL=single.css.map */
+}/*# sourceMappingURL=single.css.map */

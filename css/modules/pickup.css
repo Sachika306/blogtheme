@@ -5,16 +5,11 @@
 }
 
 .pickup-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
 }
-
 .pickup-list__item a {
   color: black;
   background-color: gray;
   text-decoration: none;
-}
-/*# sourceMappingURL=pickup.css.map */
+}/*# sourceMappingURL=pickup.css.map */

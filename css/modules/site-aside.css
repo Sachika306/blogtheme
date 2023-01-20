@@ -8,7 +8,6 @@
   margin-bottom: 30px;
   padding: 20px 30px 50px 30px;
 }
-
 .sidebar-title {
   text-align: center;
   font-weight: bold;
@@ -16,7 +15,6 @@
   margin-bottom: 40px;
   font-size: 22px;
 }
-
 .sidebar-title::after {
   content: "";
   display: block;
@@ -25,32 +23,27 @@
   margin: 0 auto;
   background-color: #78a2a7;
 }
-
 .sidebar .loadmap h4 {
   color: white;
   background-color: #78a2a7;
   border-radius: 5px;
   padding: 0px 10px;
 }
-
 .sidebar .loadmap .list {
   border-left: solid 4px #78a2a7;
   margin-left: 20px;
 }
-
 .sidebar .loadmap .list ol {
   counter-reset: li;
   /* デフォルトのスタイルをなくす */
   list-style: none;
 }
-
 .sidebar .loadmap .list ol li {
   position: relative;
   display: block;
   margin: 20px 0;
   text-decoration: none;
 }
-
 .sidebar .loadmap .list ol li:before {
   margin-left: -35px;
   content: counter(li);
@@ -69,17 +62,13 @@
   font-weight: bold;
   border-radius: 2em;
 }
-
 .sidebar .profile {
   text-align: center;
 }
-
 .sidebar .profile-image {
   border-radius: 50%;
   width: 110px;
 }
-
 .sidebar p, .sidebar li {
   font-size: 16px;
-}
-/*# sourceMappingURL=site-aside.css.map */
+}/*# sourceMappingURL=site-aside.css.map */

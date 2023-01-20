@@ -5,33 +5,27 @@
 .topArticles {
   z-index: -2;
 }
-
 .topArticles-element {
   position: relative;
   font-weight: bold;
   margin: 20px 10px 40px 10px;
 }
-
 .topArticles-element__num {
   font-size: 95px;
-  color: #ebebeb;
+  color: hsl(0deg, 0%, 92%);
   position: absolute;
   line-height: 0;
   top: 15px;
 }
-
 .topArticles-element__title {
   position: static;
   margin-left: 30px;
   opacity: 0.99;
 }
-
 .topArticles-element__title a {
   color: gray;
   font-weight: 600;
 }
-
 .topArticles-element__title a:hover {
   opacity: 0.8;
-}
-/*# sourceMappingURL=topArticles.css.map */
+}/*# sourceMappingURL=topArticles.css.map */
