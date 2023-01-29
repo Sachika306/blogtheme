@@ -49,9 +49,11 @@
         </div>
 
         <!-- スマホ用ヘッダーナビゲーションボタン -->
-        <div class="header-nav__sp">
-          <i class="fa fa-bars fa-lg"></i>
-        </div>
+        <?php if (get_theme_mod('header_mobile_menu_control')) : ?>
+          <div class="header-nav__sp">
+            <i class="fa fa-bars fa-lg"></i>
+          </div>
+        <?php endif; ?>
       </div>
     </header>
 
