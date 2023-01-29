@@ -29,7 +29,7 @@ function customizer_option_css(){
       color: <?php echo $accentColor; ?>;
     }
 
-    .pagination-next a {
+    .pagination-next a, .pagination-prev a {
       background-color: <?php echo $accentColor; ?>;
     }
 
