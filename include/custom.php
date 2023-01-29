@@ -26,6 +26,15 @@ function sidebar_panel($wp_customize)
             'panel' => 'header_panel',//紐付けるパネルID
         )
         );
+       
+    $wp_customize->add_section(
+        'header_mobile_menu', //セクションID
+        array(
+            'title' => 'ヘッダー右メニュー',//セクションタイトル名
+            'priority' => 20,//パネル内の表示位置
+            'panel' => 'header_panel',//紐付けるパネルID
+        )
+        );
     
     // ヘッダーコントロール
     $wp_customize->add_setting('header_logo_control');
@@ -37,7 +46,17 @@ function sidebar_panel($wp_customize)
         'section' => 'header_logo',
     )
     );
-      
+
+    $wp_customize->add_setting('header_mobile_menu_control');
+    $wp_customize->add_control( 
+    'header_mobile_menu_control', array(
+        'label' => 'モバイルヘッダーメニュー表示',
+        'description' => 'モバイル利用時に表示される、右上ヘッダーメニューの表示有無',
+        'settings' => 'header_mobile_menu_control',
+        'section' => 'header_mobile_menu',
+        'type' => 'checkbox',
+    )
+    );
 
     // サイドバー
     // サイドバーパネル
