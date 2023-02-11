@@ -133,8 +133,6 @@ function theme_option_file(){
 
 add_action('admin_init', 'my_theme_option_setting' );
 function my_theme_option_setting() {
-    register_setting( 'myoption-group', 'logoImg' );
-    register_setting( 'myoption-group', 'profileImg' );
     register_setting( 'myoption-group', 'googleTagManager' );
 }
 
@@ -289,9 +287,6 @@ function themes_add_presco () {
   }
 }
  add_action( 'admin_print_footer_scripts', 'themes_add_presco' );
-
-
- //記事内にアドセンス広告を表示させるコード
 
 /*
  * そのほか
