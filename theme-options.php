@@ -13,6 +13,14 @@
         </tr>
 
         <tr>
+          <th scope="row"><label for="twitterSite">TwitterのID（twitter:site のmetatagに追加されます）</label></th>
+          <td>
+            <input type="text" name="twitterSite" id="twitterSite" class="regular-text" value="<?php echo esc_attr( get_option('twitterSite') ); ?>">
+            <p>例：@munichang19</p>
+          </td>
+        </tr>
+
+        <tr>
           <th scope="row">&nbsp;</th>
           <td>&nbsp;</td>
         </tr>
