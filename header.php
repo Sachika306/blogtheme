@@ -1,26 +1,43 @@
 <!DOCTYPE html>
 <html lang="ja">
   <head>
-    <title><?php echo get_bloginfo('name'); ?></title>
-    <?php if ( null !== (get_option('googleTagManager')) ) : ?>
-      <!-- Google Tag Manager -->
+    <?php $isHome = is_front_page() || is_home(); ?>
+    <title><?php ($isHome) ? print(get_bloginfo('name')) : print(get_the_title(get_post())); ?></title>
+    <!-- OG tag -->
+      <meta property="og:url" content="<?php ($isHome) ? print(get_site_url()) : print(get_the_permalink(get_post())); ?>" />
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content="<?php ($isHome) ? print(get_bloginfo('name')) : print(get_the_title(get_post())) ; ?>" />
+      <meta property="og:description" content="<?php ($isHome) ? print(get_bloginfo('description')) : print(get_the_excerpt(get_post()))?>" />
+      <meta property="og:site_name" content="<?php echo get_bloginfo('name'); ?>" />
+      <meta property="og:image" content="<?php ($isHome) ? print(get_site_icon_url()) : print(get_the_post_thumbnail_url(get_post())); ?>" />
+    <!-- END OG tag -->
+    <!-- Twitter Card Tag -->
+      <meta name="twitter:card" content="summary">
+      <?php if (get_option('twitterSite')) : ?>
+        <meta name="twitter:site" content="<?php echo get_option('twitterSite') ?>">
+        <meta name="twitter:creator" content="<?php echo get_option('twitterSite') ?>">
+      <?php endif; ?>
+    <!-- End Twitter Card Tag -->
+    <!-- Google Tag Manager -->
+      <?php if (get_option('googleTagManager')) : ?>
       <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
         new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
         j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
         })(window,document,'script','dataLayer','<?php echo get_option('googleTagManager'); ?>');</script>
-      <!-- End Google Tag Manager -->
-    <?php endif; ?>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="shortcut icon" href="<?php echo site_url(); ?>/wp-content/uploads/2021/05/favicon-16x16.webp">
-    <?php wp_head(); ?>
+      <?php endif; ?>
+    <!-- End Google Tag Manager -->
+    <!-- Others -->
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <?php wp_head(); ?>
+    <!-- End Others -->
   </head>
 
   
   <body>
 
-  <?php if ( null !== (get_option('googleTagManager')) ) : ?>
+  <?php if (get_option('googleTagManager')) : ?>
     <!-- Google Tag Manager (noscript) -->
       <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=<?php echo get_option('googleTagManager'); ?>"
       height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
