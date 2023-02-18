@@ -37,10 +37,10 @@
 
           <div class="pagination">
             <div class="pagination-prev">
-              <?php previous_posts_link('&laquo; PREV'); ?>
+              <?php previous_posts_link('&laquo; 前へ'); ?>
             </div>
             <div class="pagination-next">
-              <?php next_posts_link('NEXT'); ?>
+              <?php next_posts_link('次へ'); ?>
             </div>
           </div>
 
