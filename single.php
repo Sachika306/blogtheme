@@ -31,11 +31,11 @@
           
           <section class="related">
             <div class="dashedLine"></div>
-            <h3>「<a href=""><?php echo get_the_category()[0]->name; ?></a>」のおすすめ記事</h3>
+            <h3>関連記事</h3>
 
             <?php 
               $relatedArticles = new WP_query( array(
-                'category_name ' => get_the_category()->name,
+                'category_name ' => get_the_category()[0]->name,
                 'posts_per_page' => 3,
                 'orderby' => 'modified',
                 'post__not_in' => array(get_the_ID())

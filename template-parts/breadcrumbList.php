@@ -73,12 +73,8 @@
         echo '</li>';
     }
 
-    // 固定記事の場合のパンクず
+    // 固定記事の場合のパンくず
     if (is_page()) {
-        $currentCat = get_the_category()[0];
-        $parentCatInt = $currentCat->category_parent;
-        $parent = get_category($parentCatInt);
-
         // 個別記事のタイトル
         echo '<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">';
         echo '<span itemprop="item">';
