@@ -55,7 +55,7 @@ function sidebar_panel($wp_customize)
         'settings' => 'header_mobile_menu_control',
         'section' => 'header_mobile_menu',
         'type' => 'checkbox',
-    )
+        )
     );
 
     // サイドバー
@@ -92,6 +92,7 @@ function sidebar_panel($wp_customize)
         'label' =>'人気記事の表示',
         'section' => 'sidebar',
         'type' => 'checkbox',
+        'description' => '人気記事の取得にはバッチを利用しているので、<a href="https://docs.google.com/document/d/14XoGsaZuK8SbcepcrCYjqQgu0OnsvafTQbh8iFeY-ps/edit?usp=sharing">こちらのドキュメント</a>に沿って設定する。'
     ));
 
     $wp_customize->add_setting('popular_article_control', array('default' => 5));
@@ -105,6 +106,51 @@ function sidebar_panel($wp_customize)
             'min' => 1,
             'max' => 10,
           ),
+        )
+    );
+
+    $wp_customize->add_setting('gpc_service_account_name');
+    $wp_customize->add_control('gpc_service_account_name', array(
+        'type' => 'text',
+        'settings' => 'gpc_service_account_name',
+        'label' => 'Google Analyticsのサービスアカウント',
+        'section' => 'sidebar',
+        'description' => 'Google AnalyticsのAPIを叩くために必要な情報。<br>
+            <a href="https://console.cloud.google.com/">Google Cloud Platformの管理者画面</a>
+            にある「サービスアカウント」で生成したアカウントをGoogle Analyticsに登録。<br>
+            サービスアカウントのメールアドレスをここに貼る。<br>',
+        'input_attrs' => array(
+            'placeholder' => 'sample@xyz-api-project.iam.gserviceaccount.com',
+            )
+        )
+    );
+
+    $wp_customize->add_setting('gpc_service_account_key');
+    $wp_customize->add_control('gpc_service_account_key', array(
+        'type' => 'text',
+        'settings' => 'gpc_service_account_key',
+        'label' => 'サービスアカウントのキーファイル名',
+        'section' => 'sidebar',
+        'description' => 'Google AnalyticsのAPIを叩くために必要な情報。<br>
+            <a href="https://console.cloud.google.com/">Google Cloud Platformの管理者画面</a>
+            にある「サービスアカウント」で生成したキーのファイル名を入れる。<br>
+            生成したキーはファイルとして「keys」ディレクトリ配下にも置いておく。<br>',
+        'input_attrs' => array(
+            'placeholder' => 'sample-api-project-hashvalue.json',
+            )
+        )
+    );
+
+    $wp_customize->add_setting('google_analytics_id');
+    $wp_customize->add_control('google_analytics_id', array(
+        'type' => 'text',
+        'settings' => 'google_analytics_id',
+        'label' => 'Google AnalyticsのID',
+        'section' => 'sidebar',
+        'description' => 'Google AnalyticsのAPIを叩くために必要、Google Analyticsの「View Settings」画面にある「View ID」を貼り付ける。<br>',
+        'input_attrs' => array(
+            'placeholder' => '206979955',
+            ),
         )
     );
 
