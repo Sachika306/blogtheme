@@ -18,7 +18,8 @@ wp-content/themes/twenty*/
 node_modules/
 include/vendor
 include/composer.lock
-keys/*
+keys/* 
+batchOutput/ranking-result.php
 
 # ignore log files and databases
 *.log
