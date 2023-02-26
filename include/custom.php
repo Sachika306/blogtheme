@@ -92,6 +92,7 @@ function sidebar_panel($wp_customize)
         'label' =>'人気記事の表示',
         'section' => 'sidebar',
         'type' => 'checkbox',
+        'description' => '人気記事の取得にはバッチを利用しているので、<a href="https://docs.google.com/document/d/14XoGsaZuK8SbcepcrCYjqQgu0OnsvafTQbh8iFeY-ps/edit?usp=sharing">こちらのドキュメント</a>に沿って設定する。'
     ));
 
     $wp_customize->add_setting('popular_article_control', array('default' => 5));

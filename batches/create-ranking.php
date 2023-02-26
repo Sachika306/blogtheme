@@ -1,6 +1,7 @@
 <?php
 /**-------------------------------------
  * 必須情報設定
+ * 注意：このファイルの名前を変えたら、wp-cli.ymlの設定も変える必要がある
  --------------------------------------*/
 class createRanking extends WP_CLI_Command {
 	function createRankingByWeeklyPageView() {
