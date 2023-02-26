@@ -3,26 +3,9 @@
         <section class="sidebar">
             <div class="topArticles">
                 <!-- 人気の記事 -->
+                
                 <h3 class="sidebar-title">人気の記事</h3>
-                <?php
-                $i = 1; // ランキングのカウント開始数値
-                $query = new WP_query( array(
-                    'posts_per_page' => get_theme_mod('popular_article_control'),
-                    'meta_key' => 'post_views_count', // アクセス数ごとに並び替える
-                    'orderby'   => 'meta_value_num' // アクセス数ごとに並び替える
-                ));
-                if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post();
-                ?>
-
-                    <article class="topArticles-element" itemscope itemtype ="https://schema.org/BlogPosting">
-                        <span class="topArticles-element__num"><?php echo ($i); $i++; ?></span>
-                        <h4 class="topArticles-element__title" itemprop="headline"><a href="<?php the_permalink(); ?>" itemprop="mainEntityOfPage"><?php the_title(); ?></a></h4>
-                    </article>
-                <?php
-                endwhile; 
-                endif;
-                wp_reset_query();
-                ?>
+                <?php get_template_part('template-parts/showRanking'); ?>
             </div>
         </section>
     <?php endif; ?>
