@@ -2,10 +2,5 @@
     "require": {
         "google/cloud": "^0.72",
         "google/apiclient":"^2.12.1"
-    },
-    "config": {
-        "platform": {
-            "php": "8.0.25"
-        }
     }
 }

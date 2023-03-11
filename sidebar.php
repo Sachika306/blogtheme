@@ -2,10 +2,10 @@
     <?php if (get_theme_mod('show_popular_article_control')) : ?>
         <section class="sidebar">
             <div class="topArticles">
-                <!-- 人気の記事 -->
-                
                 <h3 class="sidebar-title">人気の記事</h3>
-                <?php get_template_part('template-parts/showRanking'); ?>
+                <div class="topArticles-wrap">
+                    <?php get_template_part('template-parts/showRanking'); ?>
+                </div>
             </div>
         </section>
     <?php endif; ?>
@@ -21,5 +21,17 @@
             </div>
         </section>
     <?php endif; ?>
+
+    <?php if (get_theme_mod('show_tag_cloud_control')) : ?>
+        <section class="sidebar">
+            <div class="tagCloud" itemprop="keywords">
+                <h3 class="sidebar-title"><?php echo get_theme_mod('tag_cloud_title_control'); ?></h3>
+                <div class="tag_cloud">
+                    <?php echo get_template_part('template-parts/showTagCloud'); ?>
+                </div>
+            </div>
+        </section>
+    <?php endif; ?>
+
 
 </aside>

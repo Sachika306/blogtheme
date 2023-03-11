@@ -3,6 +3,11 @@
 
 .topArticles {
     z-index: -2;
+    // margin-bottom: 80px;
+
+    &-wrap {
+        margin-top: 45px;
+    }
 
     &-element {
         position: relative;

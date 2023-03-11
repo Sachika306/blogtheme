@@ -64,42 +64,6 @@ function customizer_option_css(){
 }
 add_action('wp_head', 'customizer_option_css' );
 
-
-
-
-/*
-* アクセス数の集計
-*/
-function set_post_views($postID) { 
-    $count_key = 'post_views_count';
-    $count = get_post_meta($postID, $count_key, true);
-    if ($count=='') {
-        $count = 0;
-        delete_post_meta($postID, $count_key);
-        add_post_meta($postID, $count_key, '0');
-     } else {
-        $count++;
-        update_post_meta($postID, $count_key, $count);
-    }
-  }
-
-//クローラーのアクセス判別・アクセス数から除外
-function is_bot() { 
-    $ua = $_SERVER['HTTP_USER_AGENT'];
-    $bot = array(
-          "googlebot",
-          "msnbot",
-          "yahoo"
-    );
-    foreach( $bot as $bot ) {
-      if (stripos( $ua, $bot ) !== false){
-        return true;
-      }
-    }
-    return false;
-  }
- 
-
 /*
  * ナビゲーションメニューの設定
  */
@@ -141,79 +105,6 @@ function my_theme_option_setting() {
 get_template_part( 'include/custom' );
 add_action('customize_register', 'sidebar_panel');
 
-/*
- * 管理画面の記事一覧に「KW」欄を表示
- */
-function add_customfields($post_ID){
-  $post_ID['thumbnail'] = 'サムネイル';
-  $post_ID['summary'] = '抜粋'; // $colums['excerpt']と書くと表示がおかしくなる
-  $post_ID['check'] = 'ダブルチェック'; 
-  $post_ID['pv'] = 'PV数'; 
-  $post_ID['kw'] = 'KW';
-  return $post_ID;
-}
-add_filter( 'manage_posts_columns', 'add_customfields' );
-
-
-function add_columns($column_name, $post_ID) {
-  // サムネイル
-  if ( 'thumbnail' == $column_name ) {
-    $thumb = get_the_post_thumbnail($post_id, array(100,100), 'thumbnail');
-    echo ( $thumb ) ? 'あり' : '－';
-  }
-
-  // 抜粋の表示
-  if ( 'summary' == $column_name ) {
-    $excerpt = get_the_excerpt();
-    $excerptLength = mb_strlen($excerpt, 'UTF-8');
-    if ($excerptLength != 121) {
-      echo $excerptLength.'文字';
-    } else {
-      echo 'なし';
-    }
-  }
-
-  // チェック済みか否かの表示
-  $isChecked = get_post_meta($post_ID, 'is_checked')[0];
-  if ('check' == $column_name  && $isChecked != 1) { // カスタムフィールドの列が「ダブルチェック」かつ、'is_checked'の値が1ではない（＝チェック作業が終わってない）場合
-    echo "<input type='checkbox'></input>"; //チェックが入っていないボックスを表示
-  } else if ( 'check' == $column_name && $isChecked == 1 ) { // カスタムフィールドの列が「ダブルチェック」かつ、'is_checked'の値が1（＝チェック作業が終わっている）場合
-    echo "<input type='checkbox' checked></input>"; //チェックが入っているボックスを表示
-  }
-
-  // kwの表示
-  if ( 'kw' == $column_name ) {
-      echo get_post_meta(get_the_ID(), 'kw')[0]; 
-      echo '(';
-      echo get_post_meta(get_the_ID(), 'search')[0];
-      echo get_post_meta(get_the_ID(), 'difficulty')[0];
-      echo ')'; 
-  }
-
-  // pvの表示
-  if ( 'pv' == $column_name ) {
-    echo get_post_meta(get_the_ID(), 'post_views_count')[0]; 
-  }
-}
-add_action( 'manage_posts_custom_column', 'add_columns', 10, 2 );
-
-
-// 各投稿のカスタムフィールドに「is_checked = 0」をデフォルトで表示
-function set_kw($post_ID){
-  //　現在のフィールド値を取得
-  $current_field_value = esc_html(get_post_meta($post_ID,'kw', true));
-  $current_field_value = esc_html(get_post_meta($post_ID,'search', true));
-  $current_field_value = esc_html(get_post_meta($post_ID,'is_checked', true));
-  //　フィールド値が未設定でリビジョンがない場合（新規投稿の場合）、下記のカスタムフィールドを表示
-  if ($current_field_value == '' && !wp_is_post_revision($post_ID)){
-          add_post_meta($post_ID, 'kw', '未設定');
-          add_post_meta($post_ID, 'search', '未設定');
-          add_post_meta($post_ID, 'search_difficulty', '未設定');
-          add_post_meta($post_ID, 'is_checked', 0); 
-  }
-  return $post_ID;
-}
-add_action('wp_insert_post','set_kw');
 
 /*
  * WEBP対応
