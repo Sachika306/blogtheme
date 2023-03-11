@@ -12,7 +12,7 @@
   text-align: center;
   font-weight: bold;
   letter-spacing: 1.7px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   font-size: 22px;
 }
 .sidebar-title::after {
@@ -71,4 +71,18 @@
 }
 .sidebar p, .sidebar li {
   font-size: 16px;
+}
+.sidebar .tagCloud a {
+  display: inline-block;
+  margin: 6px 5px 5px 0;
+  padding: 4px 8px;
+  border-radius: 15px;
+  background: hsl(0, 0%, 92%);
+  color: #7b7b7b;
+  font-size: 14px;
+  font-weight: bold;
+  transition: box-shadow 0.3s ease-in-out; /* add a transition for the transform property */
+}
+.sidebar .tagCloud a:hover {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* add a shadow effect */
 }/*# sourceMappingURL=site-aside.css.map */

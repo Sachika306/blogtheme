@@ -3,7 +3,7 @@
 /* ボタン */
 /* responsive */
 body {
-  background-color: hsl(0deg, 0%, 92%);
+  background-color: hsl(0, 0%, 92%);
   color: #7b7b7b;
   font-family: "Roboto", sans-serif;
   overflow-x: hidden;

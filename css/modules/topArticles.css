@@ -5,6 +5,9 @@
 .topArticles {
   z-index: -2;
 }
+.topArticles-wrap {
+  margin-top: 45px;
+}
 .topArticles-element {
   position: relative;
   font-weight: bold;
@@ -12,7 +15,7 @@
 }
 .topArticles-element__num {
   font-size: 95px;
-  color: hsl(0deg, 0%, 92%);
+  color: hsl(0, 0%, 92%);
   position: absolute;
   line-height: 0;
   top: 15px;

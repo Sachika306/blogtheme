@@ -85,6 +85,14 @@ function sidebar_panel($wp_customize)
         )
     );
 
+    $wp_customize->add_section('tag_cloud',
+        array(
+            'title' => 'タグクラウドの表示',
+            'priority' => 30,
+            'panel' => 'sidebar_panel',
+        )
+    );
+
     // サイドバーコンロール
     $wp_customize->add_setting('show_popular_article_control');
     $wp_customize->add_control('show_popular_article_control', array(
@@ -151,6 +159,36 @@ function sidebar_panel($wp_customize)
         'input_attrs' => array(
             'placeholder' => '206979955',
             ),
+        )
+    );
+
+    $wp_customize->add_setting('show_tag_cloud_control');
+    $wp_customize->add_control('show_tag_cloud_control', array(
+        'settings' => 'show_tag_cloud_control',
+        'label' =>'タグクラウドの表示',
+        'section' => 'tag_cloud',
+        'type' => 'checkbox',
+    ));
+
+    $wp_customize->add_setting( 'tag_cloud_num_control', array('default' => 10) );
+    $wp_customize->add_control( 'tag_cloud_num_control', array(
+        'type' => 'range',
+        'settings' => 'tag_cloud_num_control',
+        'label' => 'タグクラウドの表示数',
+        'section' => 'tag_cloud',
+        'input_attrs' => array(
+            'min' => 1,
+            'max' => 50,
+          ),
+        )
+    );
+
+    $wp_customize->add_setting( 'tag_cloud_title_control', array('default' => 'タグ一覧') );
+    $wp_customize->add_control( 'tag_cloud_title_control', array(
+            'type' => 'text',
+            'settings' => 'tag_cloud_title_control',
+            'label' => 'タグ一覧のタイトル名',
+            'section' => 'tag_cloud',
         )
     );
 
