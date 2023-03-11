@@ -30,7 +30,7 @@
 }
 @media (max-width: 530px) {
   .single ul li,
-.single ol li {
+  .single ol li {
     font-size: 15px;
   }
 }
