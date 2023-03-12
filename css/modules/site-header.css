@@ -58,7 +58,6 @@
   list-style: none;
   display: flex;
   margin-bottom: 0px;
-  align-self: center;
   list-style: none;
 }
 @media (max-width: 530px) {
@@ -67,8 +66,15 @@
   }
 }
 .header .parentMenu .menu-item {
+  margin-right: 20px;
   letter-spacing: 0px;
-  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+.header .parentMenu .menu-item a {
+  padding: 25px 0;
+  height: 100%;
 }
 .header .parentMenu .menu-item a {
   color: white;
@@ -93,8 +99,6 @@
   display: none;
 }
 .header .childMenu .menu-item {
-  list-style: none;
-  padding-left: 0;
   min-width: 200px;
   padding-left: 0px;
 }
