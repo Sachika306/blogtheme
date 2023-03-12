@@ -58,16 +58,22 @@
         list-style: none;
         display: flex;
         margin-bottom: 0px;
-        align-self: center;
         list-style: none;
-        
         @include sm {
             width: 0%;
         }
+
         
         .menu-item {
+            a {
+                padding: 25px 0;
+                height: 100%;
+            }
+            margin-right: 20px;
             letter-spacing: 0px;
-            padding: 18px;
+            display: flex;
+            flex-direction:column;
+            align-self: center;
             @include link(white);
             @include lg {
                 display: none;
@@ -86,7 +92,6 @@
         display: none;
 
         .menu-item {
-            @include removeUlButtons();
             min-width: 200px;
             padding-left: 0px;
 
