@@ -116,11 +116,12 @@
   background-color: #2e2e2e;
   opacity: 0.9;
   position: fixed;
-  right: -50%;
+  right: -70%;
   height: 110%;
-  width: 50%;
+  width: 70%;
   transition: 0.4s;
-  overflow: scroll;
+  overflow: auto;
+  max-height: 100vh;
   display: block;
 }
 .spnavMenu ul {

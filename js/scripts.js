@@ -1,12 +1,23 @@
 $(document).ready(function(){
-    $('.header-nav__sp').click(function() {
-        $('.spnavMenu').toggleClass('openNav');
-        if ($('.spnavMenu').hasClass('openNav')) {
-			$('body').addClass('active');
-        } else {
-            $('body').removeClass('active');
+    const spnavMenu = document.querySelector('.spnavMenu');
+    const navButton = document.querySelector('.header-nav__sp');
+
+    function navClassAction(classAction) {
+        spnavMenu.classList[classAction]('openNav');
+        document.body.classList[classAction]('active');
+    }
+
+    navButton.addEventListener('click', function(event) {
+        // これを追加しないと、次のイベントが親のdocument要素まで伝播する＝トグルしてもclassがすぐリムーブされるのでメニューが出ない
+        event.stopPropagation();
+        navClassAction('toggle');
+      });
+      
+      document.addEventListener('click', function(event) {
+        if (!spnavMenu.contains(event.target)) {
+            navClassAction('remove');
         }
-    });
+      });
 
     $('.header-nav__md').click(function() {
         $('.search').toggleClass('openSearch');
@@ -23,7 +34,7 @@ $(document).ready(function(){
         if (!$(e.target).closest('.form-control').length) {
             $('.search').removeClass('openSearch');　
             $('body').removeClass('active');
-          }
+        }
     });
 
     $('.parentMenu').find(".menu-item" ).mouseover(function() {  // mouse enter

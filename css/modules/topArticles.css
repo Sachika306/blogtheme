@@ -24,6 +24,7 @@
   position: static;
   margin-left: 30px;
   opacity: 0.99;
+  min-height: 60px;
 }
 .topArticles-element__title a {
   color: gray;
