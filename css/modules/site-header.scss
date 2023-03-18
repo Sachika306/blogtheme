@@ -115,11 +115,12 @@
     background-color: $darkGray;
     opacity: 0.9;
     position: fixed;
-    right: -50%; // メニューバーを右に隠す
+    right: -70%; // メニューバーを右に隠す
     height: 110%;
-    width: 50%;
+    width: 70%;
     transition: 0.4s;
-    overflow: scroll;
+    overflow: auto;
+    max-height: 100vh;
     display: block;
 
      ul {
