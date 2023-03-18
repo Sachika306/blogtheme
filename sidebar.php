@@ -2,7 +2,7 @@
     <?php if (get_theme_mod('show_popular_article_control')) : ?>
         <section class="sidebar">
             <div class="topArticles">
-                <h3 class="sidebar-title">人気の記事</h3>
+                <h3 class="sidebar-title">人気記事ランキング</h3>
                 <div class="topArticles-wrap">
                     <?php get_template_part('template-parts/showRanking'); ?>
                 </div>
