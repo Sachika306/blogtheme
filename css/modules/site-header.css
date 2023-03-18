@@ -138,6 +138,10 @@
   color: white;
 }
 
+.no-pointer-events * {
+  pointer-events: none;
+}
+
 .openNav {
   right: 0%;
   transition: 0.4s;
