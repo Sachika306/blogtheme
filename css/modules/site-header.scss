@@ -138,6 +138,10 @@
     
 }
 
+.no-pointer-events * {
+    pointer-events: none;
+}
+
 .openNav {
     right: 0%; // メニューバーを出す
     transition: 0.4s;
