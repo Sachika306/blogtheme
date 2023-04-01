@@ -58,7 +58,10 @@
             </h1>
           </a>
         </div>
-        <?php get_template_part('/template-parts/categoryMenu');?>
+
+        <div class="header-pcmenu">
+          <?php get_template_part('/template-parts/categoryMenu');?>
+        </div>
 
         <!-- 検索ボタン -->
         <div class="header-nav__md">
@@ -72,12 +75,11 @@
           </div>
         <?php endif; ?>
       </div>
+      <!-- スマホ用ナビゲーション -->
+      <div class="header-spmenu">
+        <?php get_template_part('/template-parts/categoryMenu');?>
+      </div>
     </header>
-
-    <!-- スマホ用ナビゲーション -->
-    <div class="spnavMenu">
-      <?php get_template_part('/template-parts/categoryMenu');?>
-    </div>
 
     <div class="search">
       <?php get_search_form(); ?>

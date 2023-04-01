@@ -2,7 +2,7 @@
 @import '../base/variables2.scss';
 
 .header {
-    display: flex;
+    display: block;
     background-color: $Gray;
     position: relative;
 
@@ -12,7 +12,8 @@
         display: flex;
         justify-content: space-between; 
         color: white;
-        
+        z-index: 1;
+
         &__md {
             align-self: center;
             padding: 18px;
@@ -52,92 +53,93 @@
         line-height: 1.1;
     }
 
-    .parentMenu {
+    &-pcmenu {
         width: 70%;
-        position: relative;
-        list-style: none;
-        display: flex;
-        margin-bottom: 0px;
-        list-style: none;
-        @include sm {
-            width: 0%;
-        }
+        align-self: left;
+        height: 100%;
 
-        
-        .menu-item {
-            a {
-                padding: 25px 0;
-                height: 100%;
-            }
-            margin-right: 20px;
-            letter-spacing: 0px;
+        .parentMenu {
             display: flex;
-            flex-direction:column;
-            align-self: center;
-            @include link(white);
-            @include lg {
+            justify-content: center; /* 水平方向の中央揃え */
+            align-items: center; /* 垂直方向の中央揃え */
+            position: absolute;
+            height: 100%;
+            font-weight: 600;
+            margin: 0;
+
+            @include removeUlButtons();
+
+            @include sm {
                 display: none;
             }
         }
-    }
-
-    .childMenu {
-        float: left;
-        background-color: $darkGray;
-        opacity: 0.8;
-        position: absolute;
-        z-index: 1;
-        top: 100%;
-        padding-left: 0;
-        display: none;
 
         .menu-item {
-            min-width: 200px;
-            padding-left: 0px;
-
+            display: flex;
+            justify-content: center; /* 水平方向の中央揃え */
+            align-items: center; /* 垂直方向の中央揃え */
+            position: relative;
+            height: 100%;
+            min-width: 120px;
+            text-align: left;
             a {
-                min-width: 200px;
-                padding: 18px;
                 color: white;
+                margin: 0 20px
+            }
+        }
+        .childMenu {
+            background-color: $darkGray;
+            opacity: 0.8;
+            position: absolute;
+            z-index: 1;
+            top: 100%;
+            padding-left: 0;
+            display: none;
+            a {
+                display: inline-block;            min-width: 200px;
+                width: inherit;
+                text-align: center;
+                margin: 20px;
+            }
+            .menu-itemActive {
+                display: block;
             }
         }
 
+
+
+    }
+
+    &-spmenu {
+        z-index: 1;
+        background-color: $darkGray;
+        opacity: 0.9;
+        position: fixed;
+        right: -70%; // メニューバーを右に隠す
+        height: 100vh;
+        width: 70%;
+        transition: 0.4s;
+        overflow: auto;
+        flex-direction: column;
+    
+        ul {
+            @include removeUlButtons();
+            .childMenu a {
+                color: gray;
+            }
+            li {
+                padding: 10px;
+                a {
+                    color: white;
+                }
+            }
+        }
     }
 
     .menu-itemActive {
         display: block;
     }
 }
-
-
-.spnavMenu {
-    z-index: 5;
-    background-color: $darkGray;
-    opacity: 0.9;
-    position: fixed;
-    right: -70%; // メニューバーを右に隠す
-    height: 110%;
-    width: 70%;
-    transition: 0.4s;
-    overflow: auto;
-    max-height: 100vh;
-    display: block;
-
-     ul {
-        @include removeUlButtons();
-        .childMenu a {
-            color: gray;
-        }
-        li {
-            padding: 10px;
-            a {
-                color: white;
-            }
-        }
-    }
-    
-}
-
 .no-pointer-events * {
     pointer-events: none;
 }
