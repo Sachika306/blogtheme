@@ -5,7 +5,7 @@ $(document).ready(function(){
 
     function navClassAction(classAction) {
         spMenu.classList[classAction]('openNav');
-        document.body.classList[classAction]('active');
+        document.body.classList[classAction]('search_bar_in_use');
     }
 
     if (navButton) {
