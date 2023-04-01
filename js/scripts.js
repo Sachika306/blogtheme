@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    const spMenu = document.querySelector('.header-spMenu');
+    const spMenu = document.querySelector('.header-spmenu');
     const navButton = document.querySelector('.header-nav__sp');
     const container = document.querySelector('.container');
 
