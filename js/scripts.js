@@ -1,22 +1,24 @@
 $(document).ready(function(){
-    const spnavMenu = document.querySelector('.spnavMenu');
+    const spMenu = document.querySelector('.header-spMenu');
     const navButton = document.querySelector('.header-nav__sp');
     const container = document.querySelector('.container');
 
     function navClassAction(classAction) {
-        spnavMenu.classList[classAction]('openNav');
+        spMenu.classList[classAction]('openNav');
         document.body.classList[classAction]('active');
     }
 
-    navButton.addEventListener('click', function(event) {
-        // これを追加しないと、次のイベントが親のdocument要素まで伝播する＝トグルしてもclassがすぐリムーブされるのでメニューが出ない
-        event.stopPropagation();
-        navClassAction('toggle');
-        container.classList.add('no-pointer-events');
-    });
-      
+    if (navButton) {
+        navButton.addEventListener('click', function(event) {
+            // これを追加しないと、次のイベントが親のdocument要素まで伝播する＝トグルしてもclassがすぐリムーブされるのでメニューが出ない
+            event.stopPropagation();
+            navClassAction('toggle');
+            container.classList.add('no-pointer-events');
+        });
+    };
+    
     document.addEventListener('click', function(event) {
-        if (!spnavMenu.contains(event.target)) {
+        if (!spMenu.contains(event.target)) {
             navClassAction('remove');
             container.classList.remove('no-pointer-events');
         }
@@ -35,7 +37,7 @@ $(document).ready(function(){
     // 検索開いてるとき、ボックス以外の箇所をクリックしたら閉じる
     $('.search').click(function(e) {
         if (!$(e.target).closest('.form-control').length) {
-            $('.search').removeClass('openSearch');　
+            $('.search').removeClass('openSearch');
             $('body').removeClass('active');
         }
     });
