@@ -3,7 +3,7 @@
 /* shareボタン用色 */
 /* ボタン */
 .header {
-  display: flex;
+  display: block;
   background-color: #333333;
   position: relative;
 }
@@ -13,6 +13,7 @@
   display: flex;
   justify-content: space-between;
   color: white;
+  z-index: 1;
 }
 .header-nav__md {
   align-self: center;
@@ -52,44 +53,41 @@
     font-size: 18px;
   }
 }
-.header .parentMenu {
+.header-pcmenu {
   width: 70%;
-  position: relative;
-  list-style: none;
-  display: flex;
-  margin-bottom: 0px;
-  list-style: none;
-}
-@media (max-width: 530px) {
-  .header .parentMenu {
-    width: 0%;
-  }
-}
-.header .parentMenu .menu-item {
-  margin-right: 20px;
-  letter-spacing: 0px;
-  display: flex;
-  flex-direction: column;
-  align-self: center;
-}
-.header .parentMenu .menu-item a {
-  padding: 25px 0;
+  align-self: left;
   height: 100%;
 }
-.header .parentMenu .menu-item a {
-  color: white;
+.header-pcmenu .parentMenu {
+  display: flex;
+  justify-content: center; /* 水平方向の中央揃え */
+  align-items: center; /* 垂直方向の中央揃え */
+  position: absolute;
+  height: 100%;
   font-weight: 600;
+  margin: 0;
+  list-style: none;
+  padding-left: 0;
 }
-.header .parentMenu .menu-item a:hover {
-  opacity: 0.8;
-}
-@media (max-width: 767px) {
-  .header .parentMenu .menu-item {
+@media (max-width: 530px) {
+  .header-pcmenu .parentMenu {
     display: none;
   }
 }
-.header .childMenu {
-  float: left;
+.header-pcmenu .menu-item {
+  display: flex;
+  justify-content: center; /* 水平方向の中央揃え */
+  align-items: center; /* 垂直方向の中央揃え */
+  position: relative;
+  height: 100%;
+  min-width: 120px;
+  text-align: left;
+}
+.header-pcmenu .menu-item a {
+  color: white;
+  margin: 0 20px;
+}
+.header-pcmenu .childMenu {
   background-color: #2e2e2e;
   opacity: 0.8;
   position: absolute;
@@ -98,44 +96,43 @@
   padding-left: 0;
   display: none;
 }
-.header .childMenu .menu-item {
+.header-pcmenu .childMenu a {
+  display: inline-block;
   min-width: 200px;
-  padding-left: 0px;
+  width: inherit;
+  text-align: center;
+  margin: 20px;
 }
-.header .childMenu .menu-item a {
-  min-width: 200px;
-  padding: 18px;
-  color: white;
-}
-.header .menu-itemActive {
+.header-pcmenu .childMenu .menu-itemActive {
   display: block;
 }
-
-.spnavMenu {
-  z-index: 5;
+.header-spmenu {
+  z-index: 1;
   background-color: #2e2e2e;
   opacity: 0.9;
   position: fixed;
   right: -70%;
-  height: 110%;
+  height: 100vh;
   width: 70%;
   transition: 0.4s;
   overflow: auto;
-  max-height: 100vh;
-  display: block;
+  flex-direction: column;
 }
-.spnavMenu ul {
+.header-spmenu ul {
   list-style: none;
   padding-left: 0;
 }
-.spnavMenu ul .childMenu a {
+.header-spmenu ul .childMenu a {
   color: gray;
 }
-.spnavMenu ul li {
+.header-spmenu ul li {
   padding: 10px;
 }
-.spnavMenu ul li a {
+.header-spmenu ul li a {
   color: white;
+}
+.header .menu-itemActive {
+  display: block;
 }
 
 .no-pointer-events * {
