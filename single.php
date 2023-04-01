@@ -18,6 +18,14 @@
             </div>
             <div class="single-content" itemprop="articleBody">
               <?php the_content(); ?>
+              <?php if (get_page_by_path('/end_of_the_content')) : ?>
+                <div id="end_of_the_content"></div>
+                <script>
+                  $(document).ready(function(){
+                    $("#end_of_the_content").load("/end_of_the_content");
+                  });
+                </script>
+              <?php endif; ?>
             </div>
 
             <div class="share">
