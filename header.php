@@ -59,7 +59,7 @@
           </a>
         </div>
 
-        <div class="header-pcmenu">
+        <div class="header-pcMenu">
           <?php get_template_part('/template-parts/categoryMenu');?>
         </div>
 
@@ -76,7 +76,7 @@
         <?php endif; ?>
       </div>
       <!-- スマホ用ナビゲーション -->
-      <div class="header-spmenu">
+      <div class="header-spMenu">
         <?php get_template_part('/template-parts/categoryMenu');?>
       </div>
     </header>

@@ -53,7 +53,7 @@
         line-height: 1.1;
     }
 
-    &-pcmenu {
+    &-pcMenu {
         width: 70%;
         align-self: left;
         height: 100%;
@@ -69,7 +69,7 @@
 
             @include removeUlButtons();
 
-            @include sm {
+            @include lg {
                 display: none;
             }
         }
@@ -110,7 +110,7 @@
 
     }
 
-    &-spmenu {
+    &-spMenu {
         z-index: 1;
         background-color: $darkGray;
         opacity: 0.9;

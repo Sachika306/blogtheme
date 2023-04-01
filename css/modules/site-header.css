@@ -53,12 +53,12 @@
     font-size: 18px;
   }
 }
-.header-pcmenu {
+.header-pcMenu {
   width: 70%;
   align-self: left;
   height: 100%;
 }
-.header-pcmenu .parentMenu {
+.header-pcMenu .parentMenu {
   display: flex;
   justify-content: center; /* 水平方向の中央揃え */
   align-items: center; /* 垂直方向の中央揃え */
@@ -69,12 +69,12 @@
   list-style: none;
   padding-left: 0;
 }
-@media (max-width: 530px) {
-  .header-pcmenu .parentMenu {
+@media (max-width: 767px) {
+  .header-pcMenu .parentMenu {
     display: none;
   }
 }
-.header-pcmenu .menu-item {
+.header-pcMenu .menu-item {
   display: flex;
   justify-content: center; /* 水平方向の中央揃え */
   align-items: center; /* 垂直方向の中央揃え */
@@ -83,11 +83,11 @@
   min-width: 120px;
   text-align: left;
 }
-.header-pcmenu .menu-item a {
+.header-pcMenu .menu-item a {
   color: white;
   margin: 0 20px;
 }
-.header-pcmenu .childMenu {
+.header-pcMenu .childMenu {
   background-color: #2e2e2e;
   opacity: 0.8;
   position: absolute;
@@ -96,17 +96,17 @@
   padding-left: 0;
   display: none;
 }
-.header-pcmenu .childMenu a {
+.header-pcMenu .childMenu a {
   display: inline-block;
   min-width: 200px;
   width: inherit;
   text-align: center;
   margin: 20px;
 }
-.header-pcmenu .childMenu .menu-itemActive {
+.header-pcMenu .childMenu .menu-itemActive {
   display: block;
 }
-.header-spmenu {
+.header-spMenu {
   z-index: 1;
   background-color: #2e2e2e;
   opacity: 0.9;
@@ -118,17 +118,17 @@
   overflow: auto;
   flex-direction: column;
 }
-.header-spmenu ul {
+.header-spMenu ul {
   list-style: none;
   padding-left: 0;
 }
-.header-spmenu ul .childMenu a {
+.header-spMenu ul .childMenu a {
   color: gray;
 }
-.header-spmenu ul li {
+.header-spMenu ul li {
   padding: 10px;
 }
-.header-spmenu ul li a {
+.header-spMenu ul li a {
   color: white;
 }
 .header .menu-itemActive {
