@@ -28,9 +28,9 @@ $(document).ready(function(){
         $('.search').toggleClass('openSearch');
         $('.search > form > input').focus(); // 検索開いたら自動でinputにフォーカス
         if ($('.search').hasClass('openSearch')) {
-            $('body').addClass('active');
+            $('body').toggleClass('search_bar_in_use');
         } else {
-            $('body').removeClass('active');
+            $('body').removeClass('search_bar_in_use');
         }
     });
 
@@ -38,7 +38,7 @@ $(document).ready(function(){
     $('.search').click(function(e) {
         if (!$(e.target).closest('.form-control').length) {
             $('.search').removeClass('openSearch');
-            $('body').removeClass('active');
+            $('body').removeClass('search_bar_in_use');
         }
     });
 
