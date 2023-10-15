@@ -156,7 +156,36 @@ function themes_add_presco() {
   echo $html;
   }
 }
- add_action( 'admin_print_footer_scripts', 'themes_add_presco' );
+add_action( 'admin_print_footer_scripts', 'themes_add_presco' );
+
+// ランキングのJSON結果を取得する
+function get_ranking_result_decoded() {
+  $rankingResultPath = get_theme_file_path('batchOutput/ranking-result.php');
+  if (!$rankingResultPath) {
+    return null; 
+  };
+
+  $rankingResultDecoded = wp_json_file_decode($rankingResultPath, true);
+  return $rankingResultDecoded;
+}
+
+// ランキングをタイトルとURLの配列にする
+function get_ranking_result() {
+  $rankingResultDecoded = get_ranking_result_decoded();
+  $maxPostNum = (get_theme_mod('popular_article_control'));
+  for ($i = 0; $i <= $maxPostNum; $i++) {
+    $post_obj = get_page_by_path($rankingResultDecoded[$i][0], OBJECT, 'post');
+    if ($post_obj) {
+      $rankingResult[] = array(
+        'rank' => $i+1,
+        'title' => get_the_title($post_obj->ID),
+        'permalink'  => get_permalink($post_obj->ID),
+      );
+    }
+  }
+
+  return $rankingResult;
+}
 
 /*
  * そのほか
