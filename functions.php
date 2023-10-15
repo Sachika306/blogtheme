@@ -172,6 +172,7 @@ function get_ranking_result_decoded() {
 // ランキングをタイトルとURLの配列にする
 function get_ranking_result() {
   $rankingResultDecoded = get_ranking_result_decoded();
+  $rankingResult = array();
   $maxPostNum = (get_theme_mod('popular_article_control'));
   for ($i = 0; $i <= $maxPostNum; $i++) {
     $post_obj = get_page_by_path($rankingResultDecoded[$i][0], OBJECT, 'post');
