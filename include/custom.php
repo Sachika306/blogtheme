@@ -153,11 +153,11 @@ function sidebar_panel($wp_customize)
     $wp_customize->add_control('google_analytics_id', array(
         'type' => 'text',
         'settings' => 'google_analytics_id',
-        'label' => 'Google AnalyticsのID',
+        'label' => 'GA4のPropertyID',
         'section' => 'sidebar',
-        'description' => 'Google AnalyticsのAPIを叩くために必要、Google Analyticsの「View Settings」画面にある「View ID」を貼り付ける。<br>',
+        'description' => 'Google AnalyticsのAPIを叩くために必要、Google Analyticsの「Property ID」を貼り付ける。<br>',
         'input_attrs' => array(
-            'placeholder' => '206979955',
+            'placeholder' => '354267573',
             ),
         )
     );

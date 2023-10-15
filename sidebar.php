@@ -4,7 +4,7 @@
             <div class="topArticles">
                 <h3 class="sidebar-title">人気記事ランキング</h3>
                 <div class="topArticles-wrap">
-                    <?php get_template_part('template-parts/showRanking'); ?>
+                    <?php get_template_part('template-parts/showRanking', null, $args = get_ranking_result()); ?>
                 </div>
             </div>
         </section>
